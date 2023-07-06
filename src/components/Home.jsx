@@ -1,4 +1,3 @@
-import React from "react";
 import Banner from "./HeroSection/Banner";
 import Foods from "./FoodItems/Foods";
 

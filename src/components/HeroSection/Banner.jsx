@@ -27,6 +27,8 @@ const ImageContainer = styled.div`
     left: -5vw;
     width: calc(105vw + 4rem);
     height: 65vh;
+    aspect-ratio: 16/9;
+    object-fit: cover;
   }
 `;
 const Text = styled.div`
