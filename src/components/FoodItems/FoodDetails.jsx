@@ -3,14 +3,23 @@ import foodList from "../../../datas.json";
 import { useEffect, useState } from "react";
 import { Container } from "../../GlobalStyle";
 import { styled } from "styled-components";
-import { AiOutlineShoppingCart } from "react-icons/ai";
+import { AiOutlinePlus, AiOutlineShoppingCart } from "react-icons/ai";
+import { AiOutlineMinus } from "react-icons/ai";
 import { useDispatch } from "react-redux";
 import { add } from "../../reducers/cartReducer";
+import Quantity from "./Quantity";
 const FoodDetails = () => {
   const { id } = useParams();
   const dispatch = useDispatch();
   const [filteredList, setFilteredList] = useState({});
   const { name, imagePath, price, details } = filteredList;
+  const [foodCount, setFoodCounty] = useState(0);
+  const handleAdd = () => {
+    setFoodCounty((prev) => prev + 1);
+  };
+  const handleRemove = () => {
+    setFoodCounty((prev) => prev - 1);
+  };
   useEffect(() => {
     if (id) {
       const singleFood = foodList.find((food) => food._id === id);
@@ -28,7 +37,15 @@ const FoodDetails = () => {
         <FoodDetail>
           <h1>{name}</h1>
           <p>{details}</p>
-          <span>${price}</span>
+          <div style={{ display: "flex", gap: "1.1rem" }}>
+            <span>${price}</span>
+            <Quantity
+              foodCount={foodCount}
+              setFoodCounty={setFoodCounty}
+              handleAdd={handleAdd}
+              handleRemove={handleRemove}
+            />
+          </div>
           <div>
             <button onClick={() => addToCart(filteredList)}>
               <AiOutlineShoppingCart size={20} />
@@ -93,4 +110,5 @@ const ImageContainer = styled.div`
     max-width: 100%;
   }
 `;
+
 export default FoodDetails;
