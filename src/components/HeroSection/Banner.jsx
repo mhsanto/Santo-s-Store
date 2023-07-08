@@ -20,6 +20,7 @@ const Banner = () => {
 const BannerSection = styled.section`
   position: relative;
   height: 65vh;
+  overflow: hidden;
 `;
 const ImageContainer = styled.div`
   img {

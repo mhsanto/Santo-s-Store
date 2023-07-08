@@ -1,8 +1,12 @@
+import { useNavigate } from "react-router-dom";
 import { styled } from "styled-components";
+// eslint-disable-next-line react/prop-types
 const FoodContainer = ({ food }) => {
-  const { imagePath, name, details, price } = food;
+  // eslint-disable-next-line react/prop-types
+  const { imagePath, name, details, price, _id } = food;
+  const navigate = useNavigate();
   return (
-    <FlexContainer>
+    <FlexContainer onClick={() => navigate("/food/" + _id)}>
       <Card>
         <img src={imagePath} alt={name} />
         <p style={{ fontWeight: 500 }}>{name}</p>
@@ -19,8 +23,8 @@ const FlexContainer = styled.div`
   align-items: center;
   justify-content: center;
   padding: 1rem;
-  /* border: 3px solid; */
   cursor: pointer;
+  border-radius: 7px;
   transition: 150ms ease-out;
   &:hover {
     box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;

@@ -2,6 +2,8 @@ import { Route, Routes } from "react-router-dom";
 import { GlobalStyle } from "./GlobalStyle";
 import Navbar from "./components/Navbar";
 import Home from "./components/Home";
+import ErrorPage from "./components/ErrorPage";
+import FoodDetails from "./components/FoodItems/FoodDetails";
 const App = () => {
   return (
     <>
@@ -10,6 +12,8 @@ const App = () => {
 
       <Routes>
         <Route path="/" element={<Home />} />
+        <Route path="/food/:id" element={<FoodDetails />} />
+        <Route path="*" element={<ErrorPage />} />
       </Routes>
     </>
   );

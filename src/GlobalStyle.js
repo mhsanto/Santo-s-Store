@@ -14,6 +14,8 @@ body{
     position:relative;
     font-family: 'Montserrat Variable', sans-serif;
     font-size: 16px;
+    overflow-x: hidden;
+
 }
 
 

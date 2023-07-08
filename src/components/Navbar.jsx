@@ -2,31 +2,59 @@ import { styled } from "styled-components";
 import logo from "../assets/Images/others/logo2.png";
 import { Container } from "../GlobalStyle";
 import { AiOutlineShoppingCart } from "react-icons/ai";
+import { useNavigate } from "react-router-dom";
+import { useSelector } from "react-redux";
 const Navbar = () => {
+  const navigate = useNavigate();
+  const cartItem = useSelector((state) => state.cart);
   return (
-    <Container>
-      <Nav>
-        <Logo>
-          <img src={logo} alt="Logo" />
-        </Logo>
+    <Nav>
+      <Container>
+        <Header>
+          <Logo onClick={() => navigate("/")}>
+            <img src={logo} alt="Logo" />
+          </Logo>
 
-        <AuthenticationSection>
-          <AiOutlineShoppingCart size={22} />
-          <button className="login">Login</button>
-          <button className="signup">Sign up</button>
-        </AuthenticationSection>
-      </Nav>
-    </Container>
+          <AuthenticationSection>
+            <Cart>
+              <AiOutlineShoppingCart
+                style={{ cursor: "pointer" }}
+                onClick={() => navigate("/")}
+                size={22}
+              />
+              <span style={{ fontWeight: 600, color: "var(--primary-color)" }}>
+                {cartItem.length}
+              </span>
+            </Cart>
+            <button className="login">Login</button>
+            <button className="signup">Sign up</button>
+          </AuthenticationSection>
+        </Header>
+      </Container>
+    </Nav>
   );
 };
 
 const Nav = styled.nav`
   display: flex;
   justify-content: space-between;
-  height: 3.75rem;
   align-items: center;
+  height: 3.75rem;
+  position: fixed;
+  background-color: #fff;
+  width: 100%;
+  align-items: center;
+  z-index: 55;
+`;
+const Header = styled.header`
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: sticky;
+  top: 0;
 `;
 const Logo = styled.div`
+  cursor: pointer;
   img {
     width: 7rem;
   }
@@ -52,4 +80,12 @@ const AuthenticationSection = styled.div`
     }
   }
 `;
+const Cart = styled.div`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.2rem;
+  text-align: center;
+`;
+
 export default Navbar;

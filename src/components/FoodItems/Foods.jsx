@@ -3,6 +3,9 @@ import foodData from "../../../datas.json";
 import { Container } from "../../GlobalStyle";
 import FoodContainer from "./FoodContainer";
 import { useState } from "react";
+import Categories from "./Category";
+import Checkout from "./Checkout";
+import CheckoutButton from "./Checkout";
 
 const Foods = () => {
   const [selectedCategory, setSelectedCategory] = useState("dinner");
@@ -15,62 +18,33 @@ const Foods = () => {
       return foods;
     }
   };
-  console.log(foods);
+
   return (
     <Container>
-      <Category>
-        <p
-          className={selectedCategory === "dinner" ? "selected" : ""}
-          onClick={() => setSelectedCategory("dinner")}
-        >
-          Dinner
-        </p>
-        <p
-          className={selectedCategory === "lunch" ? "selected" : ""}
-          onClick={() => setSelectedCategory("lunch")}
-        >
-          Lunch
-        </p>
-        <p
-          onClick={() => setSelectedCategory("breakfast")}
-          className={selectedCategory === "breakfast" ? "selected" : ""}
-        >
-          BreakFast
-        </p>
-      </Category>
+      <Categories
+        selectedCategory={selectedCategory}
+        setSelectedCategory={setSelectedCategory}
+      />
 
       <FoodStorage>
         {filterFoodByCategory().map((food) => (
           <FoodContainer key={food._id} food={food} />
         ))}
       </FoodStorage>
+      <CheckoutButton />
     </Container>
   );
 };
 const FoodStorage = styled.div`
   display: grid;
-  grid-template-columns: repeat(3, 300px);
-  grid-template-rows: repeat(3, 360px);
+  grid-template-columns: repeat(auto-fit, minmax(200px, 330px));
+
   justify-content: center;
-  gap: 4rem;
+  gap: 6rem;
   padding: 2rem 0;
-`;
-const Category = styled.div`
-  text-transform: capitalize;
-  display: flex;
-  justify-content: center;
-  gap: 4rem;
-  padding-top: 3rem;
-  p {
-    cursor: pointer;
-    position: relative;
-    transition: 250ms ease-out;
-    font-weight: 500;
-    padding-bottom: 0.2rem;
-    border-bottom: 3px solid transparent;
-  }
-  .selected {
-    border-bottom: 3px solid var(--primary-color, red);
+  @media (max-width: 1200px) {
+    gap: 2rem;
   }
 `;
+
 export default Foods;
