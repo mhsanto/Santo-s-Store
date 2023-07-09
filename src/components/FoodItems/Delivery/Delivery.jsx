@@ -30,5 +30,15 @@ const FlexContainer = styled.div`
   height: 100vh;
   justify-content: space-between;
   align-items: center;
+  gap: 1rem;
+  width: 80vw;
+  margin: 0 auto;
+  flex-wrap: wrap;
+  @media (max-width: 880px) {
+    justify-content: center;
+    & > * {
+      flex-basis: 100%;
+    }
+  }
 `;
 export default Delivery;

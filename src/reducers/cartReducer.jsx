@@ -5,7 +5,15 @@ const cartSlice = createSlice({
   initialState,
   reducers: {
     add(state, action) {
-      state.push(action.payload);
+      let existingProduct = state.find(
+        (food) => food._id === action.payload._id
+      );
+
+      if (existingProduct) {
+        existingProduct.quantity += 1;
+      } else {
+        state.push({ ...action.payload, quantity: 1 });
+      }
     },
     remove(state, action) {
       return state.filter(

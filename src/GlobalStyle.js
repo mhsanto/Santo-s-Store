@@ -10,7 +10,7 @@ export const GlobalStyle = createGlobalStyle`
     padding:0;
     box-sizing:border-box;
 }
-:root{
+html{
 scroll-padding-top:1.2rem;
 scroll-behavior: smooth;
 }

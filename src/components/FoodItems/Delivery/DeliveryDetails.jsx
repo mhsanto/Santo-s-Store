@@ -4,7 +4,6 @@ import { styled } from "styled-components";
 
 const DeliveryDetails = () => {
   const foods = useSelector((state) => state.cart);
-  const [foodPrices, setFoodPrices] = useState([]);
 
   const [priceList, setPriceList] = useState({
     subtotal: 0,
@@ -14,22 +13,21 @@ const DeliveryDetails = () => {
   });
   const { subtotal, tax, deliveryFee, total } = priceList;
   useEffect(() => {
-    const prices = foods.map((food) => food.price);
-    setFoodPrices(prices);
-
-    const subTotal = foodPrices.reduce((totals, price) => totals + price, 0);
-
-    const taxes = parseFloat((subtotal / 5).toFixed(2));
-
-    let totalValue = parseFloat((subtotal + tax + deliveryFee).toFixed(2));
+    const subTotal = foods.reduce(
+      (total, food) => total + food.price * food.quantity,
+      0
+    );
+    const subFixed = parseFloat(subTotal).toFixed(2);
+    const taxes = parseFloat((subTotal / 5).toFixed(2));
+    const totalValue = parseFloat((subTotal + taxes + deliveryFee).toFixed(2));
 
     setPriceList({
       ...priceList,
       tax: taxes,
-      subtotal: subTotal,
+      subtotal: subFixed,
       total: totalValue,
     });
-  });
+  }, []);
 
   return (
     <>

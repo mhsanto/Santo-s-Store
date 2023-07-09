@@ -3,12 +3,12 @@ import foodList from "../../../datas.json";
 import { useEffect, useState } from "react";
 import { Container } from "../../GlobalStyle";
 import { styled } from "styled-components";
-import { AiOutlinePlus, AiOutlineShoppingCart } from "react-icons/ai";
-import { AiOutlineMinus } from "react-icons/ai";
-import { useDispatch, useSelector } from "react-redux";
-import { add, remove } from "../../reducers/cartReducer";
+import { AiOutlineShoppingCart } from "react-icons/ai";
+
+import { useDispatch } from "react-redux";
+import { add } from "../../reducers/cartReducer";
 import Quantity from "./Quantity";
-import { addFood, removeFood } from "../../reducers/counterSlice";
+
 const FoodDetails = () => {
   // internal imports
   const { id } = useParams();

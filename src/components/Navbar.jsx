@@ -4,9 +4,17 @@ import { Container } from "../GlobalStyle";
 import { AiOutlineShoppingCart } from "react-icons/ai";
 import { useNavigate } from "react-router-dom";
 import { useSelector } from "react-redux";
+import { useEffect, useState } from "react";
 const Navbar = () => {
   const navigate = useNavigate();
   const cartItem = useSelector((state) => state.cart);
+  const [items, setItems] = useState(null);
+  useEffect(() => {
+    const total = cartItem.reduce((total, item) => total + item.quantity, 0);
+    console.log(cartItem);
+    setItems(total);
+  }, [cartItem]);
+
   return (
     <Nav>
       <Container>
@@ -22,7 +30,7 @@ const Navbar = () => {
             >
               <AiOutlineShoppingCart style={{ cursor: "pointer" }} size={22} />
               <span style={{ fontWeight: 600, color: "var(--primary-color)" }}>
-                {cartItem.length > 0 && cartItem.length}
+                {items > 0 && items}
               </span>
             </Cart>
             <button className="login">Login</button>

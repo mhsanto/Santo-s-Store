@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { AiOutlineMinus, AiOutlinePlus } from "react-icons/ai";
 import { useDispatch, useSelector } from "react-redux";
 import { styled } from "styled-components";
@@ -7,6 +7,8 @@ import { remove } from "../../reducers/cartReducer";
 
 const Quantity = ({ filteredList }) => {
   const foodCounter = useSelector((state) => state.counter);
+  const foods = useSelector((state) => state.cart);
+  const [count, setCount] = useState([]);
   const dispatch = useDispatch();
   const handleAdd = () => {
     dispatch(addFood());
@@ -15,7 +17,11 @@ const Quantity = ({ filteredList }) => {
     dispatch(removeFood());
     dispatch(remove(id));
   };
-
+  useEffect(() => {
+    const filterFood = foods.filter((food) => food._id === filteredList._id);
+    filterFood.map((food) => setCount([...count, food.quantity]));
+    console.log(count);
+  }, []);
   return (
     <FoodQuantity>
       <AiOutlineMinus
@@ -23,7 +29,7 @@ const Quantity = ({ filteredList }) => {
         size={15}
         color="red"
       />
-      {foodCounter}
+      {count}
       <AiOutlinePlus onClick={handleAdd} size={15} color="red" />
     </FoodQuantity>
   );
