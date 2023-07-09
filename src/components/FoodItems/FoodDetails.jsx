@@ -5,21 +5,25 @@ import { Container } from "../../GlobalStyle";
 import { styled } from "styled-components";
 import { AiOutlinePlus, AiOutlineShoppingCart } from "react-icons/ai";
 import { AiOutlineMinus } from "react-icons/ai";
-import { useDispatch } from "react-redux";
-import { add } from "../../reducers/cartReducer";
+import { useDispatch, useSelector } from "react-redux";
+import { add, remove } from "../../reducers/cartReducer";
 import Quantity from "./Quantity";
+import { addFood, removeFood } from "../../reducers/counterSlice";
 const FoodDetails = () => {
+  // internal imports
   const { id } = useParams();
   const dispatch = useDispatch();
+
+  // external imports
   const [filteredList, setFilteredList] = useState({});
+
   const { name, imagePath, price, details } = filteredList;
-  const [foodCount, setFoodCounty] = useState(0);
-  const handleAdd = () => {
-    setFoodCounty((prev) => prev + 1);
+  // const [foodCount, setFoodCounty] = useState(0);
+
+  const addToCart = (listItem) => {
+    dispatch(add(listItem));
   };
-  const handleRemove = () => {
-    setFoodCounty((prev) => prev - 1);
-  };
+
   useEffect(() => {
     if (id) {
       const singleFood = foodList.find((food) => food._id === id);
@@ -27,10 +31,7 @@ const FoodDetails = () => {
     }
   }, []);
 
-  const addToCart = (listItem) => {
-    dispatch(add(listItem));
-  };
-  console.log(filteredList);
+  // console.log(filteredList);
   return (
     <Container>
       <FoodContainer>
@@ -39,12 +40,7 @@ const FoodDetails = () => {
           <p>{details}</p>
           <div style={{ display: "flex", gap: "1.1rem" }}>
             <span>${price}</span>
-            <Quantity
-              foodCount={foodCount}
-              setFoodCounty={setFoodCounty}
-              handleAdd={handleAdd}
-              handleRemove={handleRemove}
-            />
+            <Quantity filteredList={filteredList} />
           </div>
           <div>
             <button onClick={() => addToCart(filteredList)}>

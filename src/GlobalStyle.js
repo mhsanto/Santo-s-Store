@@ -10,6 +10,10 @@ export const GlobalStyle = createGlobalStyle`
     padding:0;
     box-sizing:border-box;
 }
+:root{
+scroll-padding-top:1.2rem;
+scroll-behavior: smooth;
+}
 body{
     position:relative;
     font-family: 'Montserrat Variable', sans-serif;

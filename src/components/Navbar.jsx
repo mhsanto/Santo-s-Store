@@ -16,14 +16,13 @@ const Navbar = () => {
           </Logo>
 
           <AuthenticationSection>
-            <Cart>
-              <AiOutlineShoppingCart
-                style={{ cursor: "pointer" }}
-                onClick={() => navigate("/")}
-                size={22}
-              />
+            <Cart
+              disabled={cartItem.length === 0}
+              onClick={() => navigate("/food/delivery")}
+            >
+              <AiOutlineShoppingCart style={{ cursor: "pointer" }} size={22} />
               <span style={{ fontWeight: 600, color: "var(--primary-color)" }}>
-                {cartItem.length}
+                {cartItem.length > 0 && cartItem.length}
               </span>
             </Cart>
             <button className="login">Login</button>
@@ -40,18 +39,17 @@ const Nav = styled.nav`
   justify-content: space-between;
   align-items: center;
   height: 3.75rem;
-  position: fixed;
+  position: sticky;
   background-color: #fff;
   width: 100%;
   align-items: center;
   z-index: 55;
+  top: 0;
 `;
 const Header = styled.header`
   display: flex;
   justify-content: space-between;
   align-items: center;
-  position: sticky;
-  top: 0;
 `;
 const Logo = styled.div`
   cursor: pointer;
@@ -80,7 +78,7 @@ const AuthenticationSection = styled.div`
     }
   }
 `;
-const Cart = styled.div`
+const Cart = styled.button`
   display: flex;
   justify-content: center;
   align-items: center;
