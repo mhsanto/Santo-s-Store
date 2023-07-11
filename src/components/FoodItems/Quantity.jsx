@@ -19,8 +19,8 @@ const Quantity = ({ filteredList }) => {
   };
   useEffect(() => {
     const filterFood = foods.filter((food) => food._id === filteredList._id);
+
     filterFood.map((food) => setCount([...count, food.quantity]));
-    console.log(count);
   }, []);
   return (
     <FoodQuantity>

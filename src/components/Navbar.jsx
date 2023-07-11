@@ -5,16 +5,32 @@ import { AiOutlineShoppingCart } from "react-icons/ai";
 import { useNavigate } from "react-router-dom";
 import { useSelector } from "react-redux";
 import { useEffect, useState } from "react";
+import { onAuthStateChanged, signOut } from "firebase/auth";
+import { firebaseAuth } from "../firebase";
+
 const Navbar = () => {
+  const [isUser, setIsUser] = useState(false);
   const navigate = useNavigate();
   const cartItem = useSelector((state) => state.cart);
+
   const [items, setItems] = useState(null);
   useEffect(() => {
     const total = cartItem.reduce((total, item) => total + item.quantity, 0);
-    console.log(cartItem);
     setItems(total);
   }, [cartItem]);
-
+  const logOut = async () => {
+    try {
+      await signOut(firebaseAuth);
+    } catch (error) {
+      console.error(error);
+    }
+  };
+  useEffect(() => {
+    onAuthStateChanged(firebaseAuth, (user) => {
+      !user ? setIsUser(false) : setIsUser(true);
+    });
+  }, []);
+  console.log(firebaseAuth.currentUser);
   return (
     <Nav>
       <Container>
@@ -33,8 +49,23 @@ const Navbar = () => {
                 {items > 0 && items}
               </span>
             </Cart>
-            <button className="login">Login</button>
-            <button className="signup">Sign up</button>
+
+            {!isUser ? (
+              <button className="signup" onClick={() => navigate("/login")}>
+                {" "}
+                Sign up
+              </button>
+            ) : (
+              <button
+                className="logout"
+                onClick={() => {
+                  logOut();
+                  setIsUser(false);
+                }}
+              >
+                Logout
+              </button>
+            )}
           </AuthenticationSection>
         </Header>
       </Container>
@@ -74,16 +105,21 @@ const AuthenticationSection = styled.div`
     font-weight: 500;
     background-color: transparent;
     border: none;
+    cursor: pointer;
+    padding: 0.5rem 1.4rem;
+    border-radius: 50px;
+    &:hover {
+      opacity: 0.8;
+    }
   }
 
   .signup {
     background-color: var(--primary-color);
-    padding: 0.5rem 1.4rem;
-    border-radius: 50px;
     color: white;
-    &:hover {
-      opacity: 0.8;
-    }
+  }
+  .logout {
+    border: 1px solid var(--primary-color);
+    color: var(--primary-color);
   }
 `;
 const Cart = styled.button`

@@ -1,14 +1,22 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { styled } from "styled-components";
 import { useSelector } from "react-redux";
 import { useNavigate } from "react-router-dom";
+import { onAuthStateChanged } from "firebase/auth";
+import { firebaseAuth } from "../../firebase";
 const CheckoutButton = () => {
+  const handleCheckout = () => {
+    onAuthStateChanged(firebaseAuth, (currentUser) => {
+      currentUser ? navigate("/checkout") : navigate("/login");
+    });
+  };
+
   const cartItem = useSelector((state) => state?.cart);
   const navigate = useNavigate();
   return (
     <OrderCheckOut>
       <button
-        onClick={() => navigate("/checkout")}
+        onClick={handleCheckout}
         cart={cartItem}
         disabled={cartItem.length <= 0}
         className={cartItem.length > 0 ? "primary" : "disabled"}

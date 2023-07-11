@@ -18,7 +18,6 @@ const FoodDetails = () => {
   const [filteredList, setFilteredList] = useState({});
 
   const { name, imagePath, price, details } = filteredList;
-  // const [foodCount, setFoodCounty] = useState(0);
 
   const addToCart = (listItem) => {
     dispatch(add(listItem));
@@ -31,7 +30,6 @@ const FoodDetails = () => {
     }
   }, []);
 
-  // console.log(filteredList);
   return (
     <Container>
       <FoodContainer>
@@ -40,7 +38,6 @@ const FoodDetails = () => {
           <p>{details}</p>
           <div style={{ display: "flex", gap: "1.1rem" }}>
             <span>${price}</span>
-            <Quantity filteredList={filteredList} />
           </div>
           <div>
             <button onClick={() => addToCart(filteredList)}>
