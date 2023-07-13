@@ -6,6 +6,7 @@ import FoodDetails from "./components/FoodItems/FoodDetails";
 import Delivery from "./components/FoodItems/Delivery/Delivery";
 import Login from "./components/LoginPage/Login";
 import Home from "./components/HomePage/Home";
+import CheckoutPage from "./components/OrderCheckout/CheckoutPage";
 
 const App = () => {
   return (
@@ -18,6 +19,7 @@ const App = () => {
         <Route path="/food/:id" element={<FoodDetails />} />
         <Route path="/food/Delivery" element={<Delivery />} />
         <Route path="/login" element={<Login />} />
+        <Route path="/food/checkout" element={<CheckoutPage />} />
         <Route path="*" element={<ErrorPage />} />
       </Routes>
     </>

@@ -2,14 +2,14 @@ import React from "react";
 import Background from "./Background";
 import logo from "../../assets/images/others/logo2.png";
 import { styled } from "styled-components";
-import LoginForm from "./LoginForm";
+import SignupForm from "./SignupForm";
 const Login = () => {
   return (
     <>
       <Background />
       <Section>
         <img src={logo} alt="red onion logo" />
-        <LoginForm />
+        <SignupForm />
       </Section>
     </>
   );

@@ -21,17 +21,16 @@ body{
     overflow-x: hidden;
 
 }
-
-
 button{
     cursor:pointer;
 }
-
 `;
-
 export const Container = styled.div`
   position: relative;
   width: 80vw;
   z-index: 10;
   margin-inline: auto;
+  @media (max-width: 768px) {
+    width: 90vw;
+  }
 `;
