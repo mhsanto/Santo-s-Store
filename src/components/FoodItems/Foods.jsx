@@ -37,10 +37,10 @@ const Foods = () => {
 };
 const FoodStorage = styled.div`
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 330px));
-
+  grid-template-columns: repeat(auto-fit, minmax(min(290px, 100%), 1fr));
   justify-content: center;
-  gap: 6rem;
+  gap: 3rem;
+
   padding: 2rem 0;
   @media (max-width: 1200px) {
     gap: 2rem;

@@ -7,6 +7,7 @@ import Delivery from "./components/FoodItems/Delivery/Delivery";
 import Login from "./components/LoginPage/Login";
 import Home from "./components/HomePage/Home";
 import CheckoutPage from "./components/OrderCheckout/CheckoutPage";
+import Services from "./components/HomePage/Services";
 
 const App = () => {
   return (
@@ -20,6 +21,7 @@ const App = () => {
         <Route path="/food/Delivery" element={<Delivery />} />
         <Route path="/login" element={<Login />} />
         <Route path="/food/checkout" element={<CheckoutPage />} />
+        <Route path="/about-us/services/:id" element={<Services />} />
         <Route path="*" element={<ErrorPage />} />
       </Routes>
     </>
