@@ -33,6 +33,9 @@ const FlexContainer = styled.div`
 const Card = styled.div`
   text-align: center;
   padding: 1rem 0;
+  @media (max-width: 300px) {
+    padding: 0 1rem;
+  }
   & > * {
     padding: 0.4rem 0;
   }

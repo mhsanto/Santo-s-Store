@@ -55,28 +55,28 @@ const FoodDetails = () => {
 };
 
 const FoodContainer = styled.div`
-  display: flex;
-  gap: 4rem;
-  height: 100vh;
-  justify-content: space-around;
-  align-items: center;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(300px, 100%), 1fr));
+  place-content: center;
+  padding-top: 3rem;
+  gap: 1.2rem;
 `;
 const FoodDetail = styled.div`
-  width: 40ch;
   display: flex;
   flex-direction: column;
-  padding-bottom: 10rem;
   gap: 1.3rem;
-
+  justify-content: flex-start;
+  padding-top: 2.5rem;
   h1 {
     font-weight: 600;
-    font-size: clamp(2.19rem, calc(2.02rem + 0.83vw), 2.75rem);
+    font-size: 44px;
   }
   p {
     font-weight: 400;
     opacity: 0.8;
     line-height: 1.9;
     font-size: small;
+    max-width: 45ch;
   }
   span {
     font-size: 1.5rem;
@@ -98,7 +98,9 @@ const FoodDetail = styled.div`
   }
 `;
 const ImageContainer = styled.div`
-  max-width: 45ch;
+  display: flex;
+  align-items: center;
+  justify-content: ;
   img {
     max-width: 100%;
   }

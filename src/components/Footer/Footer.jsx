@@ -35,6 +35,7 @@ const CopyRight = styled.div`
   gap: 1rem;
   justify-content: space-between;
   p {
+    font-size: clamp(0.75rem, calc(0.44rem + 0.63vw), 1rem);
     color: rgba(255, 255, 255, 0.3);
   }
   img {

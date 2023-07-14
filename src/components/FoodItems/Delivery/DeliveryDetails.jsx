@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { useSelector } from "react-redux";
+import { useNavigate } from "react-router-dom";
 import { styled } from "styled-components";
 
 const DeliveryDetails = () => {
@@ -11,6 +12,7 @@ const DeliveryDetails = () => {
     deliveryFee: 2,
     total: 0,
   });
+  const navigate = useNavigate();
   const { subtotal, tax, deliveryFee, total } = priceList;
   useEffect(() => {
     const subTotal = foods.reduce(
@@ -39,7 +41,7 @@ const DeliveryDetails = () => {
             <p>delivery fee</p>
             <p style={{ fontWeight: 600 }}>Total</p>
           </div>
-          <div className="prices subtotal">
+          <div className="subtotal">
             <p>${subtotal}</p>
             <p>${tax}</p>
             <p>${deliveryFee}</p>
@@ -47,6 +49,9 @@ const DeliveryDetails = () => {
           </div>
         </FoodsDetails>
       )}
+      <Button disabled onClick={() => navigate("/food/checkout")}>
+        Place order
+      </Button>
     </>
   );
 };
@@ -54,12 +59,21 @@ const FoodsDetails = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 0 0.5rem;
+  padding: 1rem 0.5rem;
   .subtotal {
-    font-size: 0.875rem;
+    font-size: 15px;
+    font-weight: 500;
     display: flex;
     flex-direction: column;
     gap: 0.5rem;
   }
+`;
+const Button = styled.button`
+  width: 100%;
+  background-color: var(--primary-color, red);
+  padding: 1rem;
+  border: none;
+  color: white;
+  font-size: 1rem;
 `;
 export default DeliveryDetails;

@@ -29,7 +29,7 @@ const AboutUsSections = ({ data: { id, img, icon, title, content, more } }) => {
 
 const DataSection = styled.div`
   transition: 250px ease-out;
-  cursor: ;
+
   &:hover {
     box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 6px -1px,
       rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;

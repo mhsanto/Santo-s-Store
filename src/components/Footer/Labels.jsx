@@ -34,7 +34,9 @@ const LabelContainer = styled.div`
   flex-direction: column;
   gap: 2rem;
   justify-content: space-between;
-
+  @media (max-width: 680px) {
+    width: 100%;
+  }
   a {
     font-size: 14px;
     text-decoration: none;
@@ -46,6 +48,9 @@ const LabelContainer = styled.div`
     flex-wrap: wrap;
     gap: 1rem;
     justify-content: space-between;
+    @media (max-width: 300px) {
+      justify-content: center;
+    }
   }
 `;
 const UnorderList = styled.ul`
@@ -57,6 +62,7 @@ const UnorderList = styled.ul`
 const FlexContainer = styled.div`
   display: flex;
   column-gap: 10rem;
+  justify-content: space-between;
   @media (max-width: 1000px) {
     gap: 3rem;
   }

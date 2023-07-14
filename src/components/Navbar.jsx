@@ -78,12 +78,14 @@ const Nav = styled.nav`
   justify-content: space-between;
   align-items: center;
   height: 3.75rem;
+
   position: sticky;
   background-color: #fff;
   width: 100%;
   align-items: center;
   z-index: 55;
   top: 0;
+  /* overflow: hidden; */
 `;
 const Header = styled.header`
   display: flex;
@@ -94,6 +96,9 @@ const Logo = styled.div`
   cursor: pointer;
   img {
     width: 7rem;
+    @media (max-width: 300px) {
+      width: 5rem;
+    }
   }
 `;
 const AuthenticationSection = styled.div`
@@ -106,7 +111,7 @@ const AuthenticationSection = styled.div`
     background-color: transparent;
     border: none;
     cursor: pointer;
-    padding: 0.5rem 1.4rem;
+
     border-radius: 50px;
     &:hover {
       opacity: 0.8;
@@ -115,11 +120,23 @@ const AuthenticationSection = styled.div`
 
   .signup {
     background-color: var(--primary-color);
+    padding: 0.5rem 1.4rem;
     color: white;
+    @media (max-width: 300px) {
+      font-size: 0.84rem;
+      padding: 3px 0.5rem;
+    }
   }
   .logout {
     border: 1px solid var(--primary-color);
+    padding: 0.5rem 1.4rem;
     color: var(--primary-color);
+    @media (max-width: 300px) {
+      padding: 0;
+      border: none;
+      border-bottom: 1px solid;
+      border-radius: 0;
+    }
   }
 `;
 const Cart = styled.button`

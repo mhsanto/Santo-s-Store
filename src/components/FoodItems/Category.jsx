@@ -30,18 +30,26 @@ const Categories = ({ selectedCategory, setSelectedCategory }) => {
 const Category = styled.div`
   text-transform: capitalize;
   display: flex;
-  justify-content: center;
-  gap: 4rem;
+  flex-wrap: wrap;
+  justify-content: space-between;
   padding-top: 3rem;
+  max-width: 20rem;
+  margin-inline: auto;
+  overflow: hidden;
+  @media (max-width: 380px) {
+    justify-content: center;
+    gap: 1rem;
+  }
   p {
-    cursor: pointer;
+    border-bottom: 3px solid transparent;
+    font-weight: 500;
     position: relative;
     transition: 250ms ease-out;
-    font-weight: 500;
     padding-bottom: 0.2rem;
-    border-bottom: 3px solid transparent;
+    cursor: pointer;
   }
   .selected {
+    color: var(--primary-color, red);
     border-bottom: 3px solid var(--primary-color, red);
   }
 `;

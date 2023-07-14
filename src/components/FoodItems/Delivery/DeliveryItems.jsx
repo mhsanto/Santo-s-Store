@@ -34,6 +34,7 @@ const FoodDeliveryDetails = styled.div`
   display: flex;
   justify-content: space-between;
   gap: 0.5rem;
+
   padding: 0.35rem;
   border-radius: 20px;
   margin: 0.6rem 0;

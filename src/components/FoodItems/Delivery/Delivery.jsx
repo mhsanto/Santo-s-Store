@@ -15,12 +15,14 @@ const Delivery = () => {
         <div>
           <DeliveryForm />
         </div>
-        <div>
-          {foodItems.map((foodItem) => (
-            <DeliveryItems key={foodItem._id} foodItem={foodItem} />
-          ))}
+        <FoodItems>
+          <div className="items">
+            {foodItems.map((foodItem) => (
+              <DeliveryItems key={foodItem._id} foodItem={foodItem} />
+            ))}
+          </div>
           <DeliveryDetails />
-        </div>
+        </FoodItems>
       </FlexContainer>
     </Container>
   );
@@ -31,13 +33,23 @@ const FlexContainer = styled.div`
   justify-content: space-between;
   align-items: center;
   gap: 1rem;
-  width: 80vw;
   margin: 0 auto;
   flex-wrap: wrap;
   @media (max-width: 880px) {
     justify-content: center;
     & > * {
       flex-basis: 100%;
+    }
+  }
+`;
+const FoodItems = styled.div`
+  .items {
+    height: 350px;
+    width: max-content;
+    padding: 2rem 1rem;
+    overflow: scroll;
+    &::-webkit-scrollbar {
+      display: none;
     }
   }
 `;
