@@ -2,14 +2,14 @@ import React from "react";
 import Background from "./Background";
 import logo from "../../assets/images/others/logo2.png";
 import { styled } from "styled-components";
-import SignupForm from "./SignupForm";
-const Login = () => {
+import Form from "./Form";
+const HandleAuthentication = () => {
   return (
     <>
       <Background />
       <Section>
         <img src={logo} alt="red onion logo" />
-        <SignupForm />
+        <Form />
       </Section>
     </>
   );
@@ -26,4 +26,4 @@ const Section = styled.section`
     max-width: 100%;
   }
 `;
-export default Login;
+export default HandleAuthentication;

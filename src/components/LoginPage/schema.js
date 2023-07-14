@@ -9,3 +9,7 @@ export const schema = yup.object().shape({
     .oneOf([yup.ref("password"), null], "Password didn't match")
     .required("Please confirm your password"),
 });
+export const schemaTwo = yup.object().shape({
+  email: yup.string().email().required("Please enter a valid email address"),
+  password: yup.string().min(4).max(15).required("You must enter a password"),
+});

@@ -22,9 +22,9 @@ const Labels = () => {
         </UnorderList>
       </FlexContainer>
       <div className="flex">
-        <Link>Privacy Policy</Link>
-        <Link>Terms of Use</Link>
-        <Link>Pricing</Link>
+        <Link to="/footer/terms">Privacy Policy</Link>
+        <Link to="/footer/condition">Terms of Use</Link>
+        <Link to="/footer/condition">Pricing</Link>
       </div>
     </LabelContainer>
   );

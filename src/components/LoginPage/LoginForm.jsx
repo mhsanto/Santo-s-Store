@@ -1,24 +1,19 @@
 import { yupResolver } from "@hookform/resolvers/yup";
 import { useForm } from "react-hook-form";
 import { styled } from "styled-components";
-import { schema } from "./schema";
-import { useNavigate } from "react-router-dom";
-import { Button } from "./LoginForm";
-const SignupForm = ({ onSubmit }) => {
-  const navigate = useNavigate();
+import { schema, schemaTwo } from "./schema";
+
+const LoginForm = ({ onSubmit }) => {
   const {
     handleSubmit,
     register,
     formState: { errors },
   } = useForm({
-    resolver: yupResolver(schema),
+    resolver: yupResolver(schemaTwo),
   });
 
   return (
     <FormField onSubmit={handleSubmit(onSubmit)}>
-      <input type="text" placeholder="Full Name" {...register("fullName")} />
-      {errors.fullName?.message && <p>{errors.fullName?.message}</p>}
-
       {/* //email field */}
       <input type="email" placeholder="email" {...register("email")} />
       {errors.email?.message && <p>{errors.email?.message}</p>}
@@ -27,15 +22,7 @@ const SignupForm = ({ onSubmit }) => {
       {errors.password?.message && <p>{errors.password?.message}</p>}
       {/* //Confirm password field */}
 
-      <input
-        type="password"
-        placeholder="confirm password"
-        {...register("confirmPassword")}
-      />
-      {errors.confirmPassword?.message && (
-        <p>{errors.confirmPassword?.message}</p>
-      )}
-      <Button type="submit">Signup</Button>
+      <Button type="submit">Login</Button>
     </FormField>
   );
 };
@@ -69,5 +56,12 @@ const FormField = styled.form`
     }
   }
 `;
-
-export default SignupForm;
+export const Button = styled.button`
+  padding: 1rem;
+  color: white;
+  background-color: var(--primary-color, red);
+  border: none;
+  border-radius: 8px;
+  width: 100%;
+`;
+export default LoginForm;

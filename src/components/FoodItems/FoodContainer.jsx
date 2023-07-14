@@ -22,7 +22,7 @@ const FlexContainer = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 1rem;
+  padding: 1rem 0;
   cursor: pointer;
   border-radius: 7px;
   transition: 150ms ease-out;
@@ -32,6 +32,7 @@ const FlexContainer = styled.div`
 `;
 const Card = styled.div`
   text-align: center;
+  padding: 1rem 0;
   & > * {
     padding: 0.4rem 0;
   }
