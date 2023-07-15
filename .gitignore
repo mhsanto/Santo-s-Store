@@ -13,12 +13,15 @@ dist-ssr
 *.local
 vite.config.js
 # Editor directories and files
+.vscode
 .vscode/*
 !.vscode/extensions.json
 .idea
 .DS_Store
 *.suo
+*.eslintrc.cjs
 *.ntvs*
 *.njsproj
 *.sln
 *.sw?
+*vite.config.js
