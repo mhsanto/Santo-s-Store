@@ -1,6 +1,6 @@
 import React from "react";
 import Background from "./Background";
-import logo from "../../assets/images/others/logo2.png";
+import logo from "../../assets/images/others/logoTwo.png";
 import { styled } from "styled-components";
 import Form from "./Form";
 const HandleAuthentication = () => {

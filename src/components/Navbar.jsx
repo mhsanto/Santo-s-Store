@@ -1,5 +1,5 @@
 import { styled } from "styled-components";
-import logo from "../assets/Images/others/logo2.png";
+import logo from "../assets/Images/others/logoTwo.png";
 import { Container } from "../GlobalStyle";
 import { AiOutlineShoppingCart } from "react-icons/ai";
 import { useNavigate } from "react-router-dom";
@@ -30,7 +30,7 @@ const Navbar = () => {
       !user ? setIsUser(false) : setIsUser(true);
     });
   }, []);
-  // console.log(firebaseAuth.currentUser);
+
   return (
     <Nav>
       <Container>
