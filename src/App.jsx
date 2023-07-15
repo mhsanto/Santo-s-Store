@@ -1,3 +1,4 @@
+import React from "react";
 import { Route, Routes } from "react-router-dom";
 import { GlobalStyle } from "./GlobalStyle";
 import Navbar from "./components/Navbar";
