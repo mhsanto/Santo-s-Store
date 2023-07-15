@@ -1,16 +1,50 @@
-import React from "react";
 import { styled } from "styled-components";
 
-const DeliveryForm = () => {
+const DeliveryForm = ({ inputValues, handleInputValues, handleSubmit }) => {
   return (
     <FormContainer>
       <h1>Edit Delivery Details</h1>
-      <Form>
-        <input type="text" placeholder="Location" />
-        <input type="text" placeholder="Road no." />
-        <input type="text" placeholder="Flat suite or floor" />
-        <input type="text" placeholder="Business Name" />
-        <input type="text" placeholder="Add delivery instructor" />
+      <Form onSubmit={handleSubmit}>
+        <input
+          type="text"
+          name="location"
+          value={inputValues.location}
+          onChange={handleInputValues}
+          placeholder="Location"
+          required
+        />
+        <input
+          type="text"
+          name="road"
+          value={inputValues.road}
+          onChange={handleInputValues}
+          placeholder="Road no."
+          required
+        />
+        <input
+          type="text"
+          name="floor"
+          value={inputValues.floor}
+          onChange={handleInputValues}
+          placeholder="Flat suite or floor"
+          required
+        />
+        <input
+          type="text"
+          name="business"
+          value={inputValues.business}
+          onChange={handleInputValues}
+          placeholder="Business Name"
+          required
+        />
+        <input
+          type="text"
+          name="instructor"
+          value={inputValues.instructor}
+          onChange={handleInputValues}
+          placeholder="Add delivery instructor"
+          required
+        />
         <button type="submit">Save and Continue</button>
       </Form>
     </FormContainer>

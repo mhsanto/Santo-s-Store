@@ -19,7 +19,7 @@ const cartSlice = createSlice({
       let existingProductIndex = state.findIndex(
         (food) => food._id === action.payload._id
       );
-
+      console.log(existingProductIndex);
       if (existingProductIndex !== -1) {
         let existingProduct = state[existingProductIndex];
         if (existingProduct.quantity === 1) {

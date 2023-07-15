@@ -3,22 +3,18 @@ import BikeImage from "../../assets/images/others/bike.png";
 import userphoto from "../../assets/images/others/user.png";
 import { styled } from "styled-components";
 
-const DeliveryDetails = () => {
+const DeliveryDetails = ({ name, email, userAddresses }) => {
   const [time, setTime] = useState(new Date());
-  useEffect(() => {
-    const timerID = setInterval(() => tick(), 1000);
-    return () => clearInterval(timerID);
-  }, []);
-  const tick = () => {
-    setTime(new Date());
-  };
+
   const options = {
     hour: "numeric",
     minute: "2-digit",
     hour12: false,
   };
   const formateTime = time.toLocaleTimeString([], options);
+
   const futureTime = new Date(time.getTime() + 30 * 60000);
+
   const formateFutureTime = futureTime.toLocaleTimeString([], options);
   return (
     <>
@@ -28,7 +24,15 @@ const DeliveryDetails = () => {
       <LocationDetails>
         <div>
           <h5>Your Location</h5>
-          <Paragraph>107 RD No 9</Paragraph>
+          <Paragraph>
+            {userAddresses?.location ? (
+              <>
+                {userAddresses.location},{userAddresses.road}
+              </>
+            ) : (
+              "Please Provide your address"
+            )}
+          </Paragraph>
         </div>
 
         <div>
@@ -37,15 +41,17 @@ const DeliveryDetails = () => {
         </div>
       </LocationDetails>
       <div style={{ padding: "1rem" }}>
-        <h1 style={{ fontWeight: 500 }}>{formateFutureTime}</h1>
-        <Paragraph>Estimated Delivery Time</Paragraph>
+        <h1 style={{ fontWeight: 500 }}>{formateTime}</h1>
+        <Paragraph>Estimated Delivery Time -{formateFutureTime}</Paragraph>
       </div>
 
       <UserName>
-        <img src={userphoto} alt="" />
         <div>
-          <h5>Hamim</h5>
-          <Paragraph>Your Raider</Paragraph>
+          <img src={userphoto} alt="" />
+        </div>
+        <div>
+          <h5>{name ? name : "unknown user"}</h5>
+          <Paragraph>{email}</Paragraph>
         </div>
       </UserName>
     </>
@@ -59,16 +65,13 @@ const LocationDetails = styled.div`
   border-radius: 10px;
   gap: 1.5rem;
   padding: 1rem;
+
   h5 {
     font-size: 15px;
     font-weight: 600;
   }
 `;
-const Paragraph = styled.p`
-  opacity: 0.7;
-  padding: 5px 0;
-  font-size: 0.8125rem;
-`;
+
 const Imagediv = styled.div`
   padding: 0.3125rem 1.5rem;
   img {
@@ -80,19 +83,33 @@ const UserName = styled.div`
   display: flex;
   background-color: #fff;
   padding: 0.3rem 1rem;
+
   align-items: center;
   border-radius: 10px;
   gap: 0.7rem;
+  @media (max-width: 380px) {
+    flex-wrap: wrap;
+    text-align: center;
+  }
+  & > * {
+    flex: 1 1;
+  }
   h5 {
     font-weight: 600;
   }
   img {
-    width: 4.2rem;
+    width: 3.4rem;
     max-width: 100%;
   }
   div {
     display: flex;
     flex-direction: column;
   }
+`;
+const Paragraph = styled.p`
+  opacity: 0.7;
+  padding: 5px 0;
+
+  font-size: 0.8125rem;
 `;
 export default DeliveryDetails;

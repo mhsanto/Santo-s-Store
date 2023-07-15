@@ -4,8 +4,7 @@ import { Container } from "../../GlobalStyle";
 import FoodContainer from "./FoodContainer";
 import { useState } from "react";
 import Categories from "./Category";
-import Checkout from "./Checkout";
-import CheckoutButton from "./Checkout";
+import CheckoutButton from "./CheckoutButton";
 
 const Foods = () => {
   const [selectedCategory, setSelectedCategory] = useState("dinner");

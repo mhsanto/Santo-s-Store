@@ -3,7 +3,7 @@ import { useSelector } from "react-redux";
 import { useNavigate } from "react-router-dom";
 import { styled } from "styled-components";
 
-const DeliveryDetails = () => {
+const DeliveryDetails = ({ isDeliveryDetails }) => {
   const foods = useSelector((state) => state.cart);
 
   const [priceList, setPriceList] = useState({
@@ -34,24 +34,32 @@ const DeliveryDetails = () => {
   return (
     <>
       {foods.length > 0 && (
-        <FoodsDetails>
-          <div className="subtotal">
-            <p>subtotal. {foods.length} item</p>
-            <p>tax</p>
-            <p>delivery fee</p>
-            <p style={{ fontWeight: 600 }}>Total</p>
-          </div>
-          <div className="subtotal">
-            <p>${subtotal}</p>
-            <p>${tax}</p>
-            <p>${deliveryFee}</p>
-            <p style={{ fontWeight: 600 }}>${total}</p>
-          </div>
-        </FoodsDetails>
+        <>
+          <FoodsDetails>
+            <div className="subtotal">
+              <p>subtotal. {foods.length} item</p>
+              <p>tax</p>
+              <p>delivery fee</p>
+              <p style={{ fontWeight: 600 }}>Total</p>
+            </div>
+            <div className="subtotal">
+              <p>${subtotal}</p>
+              <p>${tax}</p>
+              <p>${deliveryFee}</p>
+              <p style={{ fontWeight: 600 }}>${total}</p>
+            </div>
+          </FoodsDetails>
+          <DeliveryDetailsButton>
+            <Button
+              disabled={!isDeliveryDetails}
+              className={!isDeliveryDetails ? "disable" : ""}
+              onClick={() => navigate("/food/checkout")}
+            >
+              Place order
+            </Button>
+          </DeliveryDetailsButton>
+        </>
       )}
-      <Button disabled onClick={() => navigate("/food/checkout")}>
-        Place order
-      </Button>
     </>
   );
 };
@@ -66,6 +74,12 @@ const FoodsDetails = styled.div`
     display: flex;
     flex-direction: column;
     gap: 0.5rem;
+  }
+`;
+const DeliveryDetailsButton = styled.div`
+  .disable {
+    background-color: gray !important;
+    opacity: 0.4;
   }
 `;
 const Button = styled.button`

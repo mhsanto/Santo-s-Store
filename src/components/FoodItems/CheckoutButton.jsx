@@ -1,4 +1,3 @@
-import React, { useEffect } from "react";
 import { styled } from "styled-components";
 import { useSelector } from "react-redux";
 import { useNavigate } from "react-router-dom";
@@ -7,7 +6,7 @@ import { firebaseAuth } from "../../firebase";
 const CheckoutButton = () => {
   const handleCheckout = () => {
     onAuthStateChanged(firebaseAuth, (currentUser) => {
-      currentUser ? navigate("/food/Delivery") : navigate("/login");
+      currentUser ? navigate("/food/delivery") : navigate("/login");
     });
   };
 

@@ -6,6 +6,7 @@ import {
   createUserWithEmailAndPassword,
   onAuthStateChanged,
   signInWithEmailAndPassword,
+  updateProfile,
 } from "firebase/auth";
 import SignupForm from "./SignupForm";
 import { useNavigate } from "react-router-dom";
@@ -13,12 +14,12 @@ import LoginForm from "./LoginForm";
 const Form = () => {
   const [haveAccount, setHaveAccount] = useState(true);
   const navigate = useNavigate();
-  const Signup = async (email, password, name) => {
-    try {
-      await createUserWithEmailAndPassword(firebaseAuth, email, password, name);
-    } catch (error) {
-      console.error(error);
-    }
+  const Signup = (email, password, fullName) => {
+    createUserWithEmailAndPassword(firebaseAuth, email, password)
+      .then(({ user }) => {
+        updateProfile(user, { displayName: fullName });
+      })
+      .catch((err) => console.error(err.message));
   };
   const Login = async (email, password) => {
     try {

@@ -1,19 +1,45 @@
-import React from "react";
-import { useSelector } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import { Container } from "../../../GlobalStyle";
 import DeliveryItems from "./DeliveryItems";
-
 import { styled } from "styled-components";
 import DeliveryForm from "./DeliveryForm";
 import DeliveryDetails from "./DeliveryDetails";
+import { useState } from "react";
+import { address } from "../../../reducers/locationSlice";
 
 const Delivery = () => {
+  const [inputValues, setInputValues] = useState({
+    location: "",
+    road: "",
+    floor: "",
+    business: "",
+    instructor: "",
+  });
+  const [isDeliveryDetails, setIsDeliveryDetails] = useState(false);
+
+  //from redux-toolkit
   const foodItems = useSelector((state) => state.cart);
+  const dispatch = useDispatch();
+
+  const handleInputValues = (event) => {
+    const { name, value } = event.target;
+    setInputValues((prevValue) => ({ ...prevValue, [name]: value }));
+    dispatch(address(inputValues));
+  };
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    setIsDeliveryDetails(true);
+  };
+  // console.log(inputValues);
   return (
     <Container>
       <FlexContainer>
         <div>
-          <DeliveryForm />
+          <DeliveryForm
+            inputValues={inputValues}
+            handleInputValues={handleInputValues}
+            handleSubmit={handleSubmit}
+          />
         </div>
         <FoodItems>
           <div className="items">
@@ -21,7 +47,7 @@ const Delivery = () => {
               <DeliveryItems key={foodItem._id} foodItem={foodItem} />
             ))}
           </div>
-          <DeliveryDetails />
+          <DeliveryDetails isDeliveryDetails={isDeliveryDetails} />
         </FoodItems>
       </FlexContainer>
     </Container>
@@ -45,7 +71,7 @@ const FlexContainer = styled.div`
 const FoodItems = styled.div`
   .items {
     display: flex;
-    justify-content: center;
+    justify-content: flex-end;
     flex-direction: column;
     height: 400px;
     padding: 2rem 1rem;

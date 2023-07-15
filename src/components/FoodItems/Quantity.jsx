@@ -11,14 +11,12 @@ const Quantity = ({ filteredList }) => {
   const dispatch = useDispatch();
   // console.log(foodItems);
   const addItem = (item) => {
-    console.log(item);
     setFoodCount((prevCount) => prevCount + 1);
     dispatch(add(item));
   };
   const removeItem = (item) => {
-    console.log(item);
     dispatch(remove(item));
-    setFoodCount((prevCount) => item.quantity - 1);
+    setFoodCount((prevCount) => prevCount - 1);
   };
   useEffect(() => {
     if (filteredList.quantity) {
