@@ -7,7 +7,6 @@ A Restaurant Site using React,Redux,Firebase,React-Router-Dom,React-Form,Styled-
 - [Features](#features)
 - [Challenges](#challenges)
 - [Future Development](#futuredevelopment)
-- [Contributing](#contributing)
 - [License](#license)
 
 ## Features
@@ -27,9 +26,11 @@ Challenges and final Thought
 -Protective Routes
 -To Add food counter option for each item and calculate them
 
-##Future Development
+## Future Development
 -Searching
--Add  live map when a user is proceed to checkout
--Add local storage 
+-Add live map when a user is proceed to checkout
+-Add Local Storage for selected food items
+
+## License
 
 
