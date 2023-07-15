@@ -1,5 +1,5 @@
 import { styled } from "styled-components";
-import logo from "../assets/Images/others/logoTwo.png";
+import LogoPic from "../assets/images/others/logoTwo.png";
 import { Container } from "../GlobalStyle";
 import { AiOutlineShoppingCart } from "react-icons/ai";
 import { useNavigate } from "react-router-dom";
@@ -36,7 +36,7 @@ const Navbar = () => {
       <Container>
         <Header>
           <Logo onClick={() => navigate("/")}>
-            <img src={logo} alt="Logo" />
+            <img src={LogoPic} alt="Logo" />
           </Logo>
 
           <AuthenticationSection>

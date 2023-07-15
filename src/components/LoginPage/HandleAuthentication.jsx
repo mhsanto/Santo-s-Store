@@ -1,6 +1,6 @@
 import React from "react";
 import Background from "./Background";
-import logo from "../../assets/images/others/logoTwo.png";
+import Logo from "../../assets/images/others/logoTwo.png";
 import { styled } from "styled-components";
 import Form from "./Form";
 const HandleAuthentication = () => {
@@ -8,7 +8,7 @@ const HandleAuthentication = () => {
     <>
       <Background />
       <Section>
-        <img src={logo} alt="red onion logo" />
+        <img src={Logo} alt="red onion logo" />
         <Form />
       </Section>
     </>
