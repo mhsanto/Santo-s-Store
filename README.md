@@ -10,26 +10,25 @@ A Restaurant Site using React,Redux,Firebase,React-Router-Dom,React-Form,Styled-
 - [License](#license)
 
 ## Features
--Firebase Authentication: Users can sign in and sign up using Firebase for secure authentication
--Form Validation: React Form is used for form validation to ensure data integrity.
--Dynamic Routing: React Router DOM enables dynamic routing within the application.
--Product Management: Users can add and remove products, providing a product management functionality.
--Checkout and Responsive Design: The site offers a mobile-responsive design and a checkout feature for a seamless user experience.
--Redux Toolkit: Redux Toolkit is integrated into the project to manage state and facilitate predictable state updates, improving the overall architecture and maintainability of the application.
-
+<p>-Dynamic Routing: React Router DOM enables dynamic routing within the application.</p>
+<p>-Form Validation: React Form is used for form validation to ensure data integrity.</p>
+<p>-Product Management: Users can add and remove products, providing a product management functionality.</p>
+<p>-Checkout and Responsive Design: The site offers a mobile-responsive design and a checkout feature for a seamless user experience.</p>
+<p>-Redux Toolkit: Redux Toolkit is integrated into the project to manage state and facilitate predictable state updates, improving the overall architecture and maintainability of the application.</p> 
 ## Challenges
-Challenges and final Thought
 
--Integrating Firebase Authentication
--React Form Validations
--Redux Toolkit
--Protective Routes
--To Add food counter option for each item and calculate them
+Challenges I faced and final Thought
+
+<p>-Integrating Firebase Authentication</p>
+<p>-React Form Validations</p>
+<p>-Redux Toolkit</p>
+<p>-Protective Routes</p>
+<p>-To Add food counter option for each item and calculate them</p>
 
 ## Future Development
--Searching
--Add live map when a user is proceed to checkout
--Add Local Storage for selected food items
+<p>-Searching</p>
+<p>-Add live map when a user is proceed to checkout</p>
+<p>-Add Local Storage for selected food items</p>
 
 ## License
 
