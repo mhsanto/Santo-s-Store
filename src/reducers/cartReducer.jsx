@@ -16,9 +16,20 @@ const cartSlice = createSlice({
       }
     },
     remove(state, action) {
-      return state.filter(
-        (filteredState) => filteredState._id !== action.payload
+      let existingProductIndex = state.findIndex(
+        (food) => food._id === action.payload._id
       );
+
+      if (existingProductIndex !== -1) {
+        let existingProduct = state[existingProductIndex];
+        if (existingProduct.quantity === 1) {
+          state.splice(existingProductIndex, 1); // Remove the product from the cart
+        } else {
+          existingProduct.quantity -= 1; // Decrement the quantity
+        }
+      } else {
+        state.push({ ...action.payload, quantity: 1 }); // Add the product to the cart with quantity 1
+      }
     },
   },
 });

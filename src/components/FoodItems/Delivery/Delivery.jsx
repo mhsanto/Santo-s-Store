@@ -44,12 +44,18 @@ const FlexContainer = styled.div`
 `;
 const FoodItems = styled.div`
   .items {
-    height: 350px;
-    width: max-content;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    height: 400px;
     padding: 2rem 1rem;
     overflow: scroll;
     &::-webkit-scrollbar {
       display: none;
+    }
+    & > * {
+      min-height: 20px;
+      flex: 1 auto 100%;
     }
   }
 `;

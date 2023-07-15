@@ -29,7 +29,7 @@ const DeliveryDetails = () => {
       subtotal: subFixed,
       total: totalValue,
     });
-  }, []);
+  }, [foods]);
 
   return (
     <>

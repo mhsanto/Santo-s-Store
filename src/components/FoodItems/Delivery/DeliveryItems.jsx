@@ -2,7 +2,6 @@ import React from "react";
 import { styled } from "styled-components";
 import Quantity from "../Quantity";
 import { useSelector } from "react-redux";
-import DeliveryDetails from "./DeliveryDetails";
 
 const DeliveryItems = ({ foodItem }) => {
   const cartItems = useSelector((state) => state.cart);
@@ -34,7 +33,6 @@ const FoodDeliveryDetails = styled.div`
   display: flex;
   justify-content: space-between;
   gap: 0.5rem;
-
   padding: 0.35rem;
   border-radius: 20px;
   margin: 0.6rem 0;

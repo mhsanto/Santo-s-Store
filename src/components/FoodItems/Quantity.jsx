@@ -1,36 +1,35 @@
-import React, { useEffect, useState } from "react";
-import { AiOutlineMinus, AiOutlinePlus } from "react-icons/ai";
 import { useDispatch, useSelector } from "react-redux";
 import { styled } from "styled-components";
-import { addFood, removeFood } from "../../reducers/counterSlice";
-import { remove } from "../../reducers/cartReducer";
-
+import { AiOutlineMinus, AiOutlinePlus } from "react-icons/ai";
+import { add, remove } from "../../reducers/cartReducer";
+import { useEffect, useState } from "react";
 const Quantity = ({ filteredList }) => {
-  const foodCounter = useSelector((state) => state.counter);
-  const foods = useSelector((state) => state.cart);
-  const [count, setCount] = useState([]);
+  const foodItems = useSelector((state) => state.cart);
+
+  const [foodCount, setFoodCount] = useState(0);
+
   const dispatch = useDispatch();
-  const handleAdd = () => {
-    dispatch(addFood());
+  // console.log(foodItems);
+  const addItem = (item) => {
+    console.log(item);
+    setFoodCount((prevCount) => prevCount + 1);
+    dispatch(add(item));
   };
-  const handleRemove = (id) => {
-    dispatch(removeFood());
-    dispatch(remove(id));
+  const removeItem = (item) => {
+    console.log(item);
+    dispatch(remove(item));
+    setFoodCount((prevCount) => item.quantity - 1);
   };
   useEffect(() => {
-    const filterFood = foods.filter((food) => food._id === filteredList._id);
-
-    filterFood.map((food) => setCount([...count, food.quantity]));
-  }, []);
+    if (filteredList.quantity) {
+      setFoodCount(filteredList.quantity);
+    }
+  }, [filteredList.quantity]);
   return (
     <FoodQuantity>
-      <AiOutlineMinus
-        onClick={() => handleRemove(filteredList._id)}
-        size={15}
-        color="red"
-      />
-      {count}
-      <AiOutlinePlus onClick={handleAdd} size={15} color="red" />
+      <AiOutlinePlus onClick={() => addItem(filteredList)} />
+      {foodCount}
+      <AiOutlineMinus onClick={() => removeItem(filteredList)} />
     </FoodQuantity>
   );
 };
@@ -46,6 +45,10 @@ const FoodQuantity = styled.div`
   max-width: 100%;
   & > * {
     cursor: pointer;
+  }
+  @media (max-width: 480px) {
+    padding: 0.1rem 0.5rem;
+    font-size: 13px;
   }
 `;
 export default Quantity;

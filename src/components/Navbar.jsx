@@ -30,7 +30,7 @@ const Navbar = () => {
       !user ? setIsUser(false) : setIsUser(true);
     });
   }, []);
-  console.log(firebaseAuth.currentUser);
+  // console.log(firebaseAuth.currentUser);
   return (
     <Nav>
       <Container>
