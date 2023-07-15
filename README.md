@@ -1,6 +1,6 @@
 # A Restaurant Site 
 
-###A Restaurant Site using React,Redux,Firebase,React-Router-Dom,React-Form,Styled-Components,yup
+### A Restaurant Site using React,Redux,Firebase,React-Router-Dom,React-Form,Styled-Components,yup
 
 ## Table of Contents
 
