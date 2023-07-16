@@ -1,5 +1,5 @@
 import { useParams } from "react-router-dom";
-import foodList from "../../../datas.json";
+import foodList from "../../datas";
 import { useEffect, useState } from "react";
 import { Container } from "../../GlobalStyle";
 import { styled } from "styled-components";
@@ -7,7 +7,6 @@ import { AiOutlineShoppingCart } from "react-icons/ai";
 
 import { useDispatch } from "react-redux";
 import { add } from "../../reducers/cartReducer";
-import Quantity from "./Quantity";
 
 const FoodDetails = () => {
   // internal imports

@@ -1,6 +1,5 @@
 import { styled } from "styled-components";
-import React from "react";
-import foodData from "../../../datas.json";
+import foodData from "../../datas";
 import { Container } from "../../GlobalStyle";
 import FoodContainer from "./FoodContainer";
 import { useState } from "react";

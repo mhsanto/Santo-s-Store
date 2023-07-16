@@ -30,7 +30,7 @@ const Delivery = () => {
     e.preventDefault();
     setIsDeliveryDetails(true);
   };
-  // console.log(inputValues);
+
   return (
     <Container>
       <FlexContainer>
@@ -61,7 +61,8 @@ const FlexContainer = styled.div`
   gap: 1rem;
   margin: 0 auto;
   flex-wrap: wrap;
-  @media (max-width: 880px) {
+
+  @media (max-width: 930px) {
     justify-content: center;
     & > * {
       flex-basis: 100%;
@@ -71,16 +72,17 @@ const FlexContainer = styled.div`
 const FoodItems = styled.div`
   .items {
     display: flex;
-    justify-content: flex-end;
     flex-direction: column;
-    height: 400px;
+    height: 300px;
+    min-width: 30vw;
     padding: 2rem 1rem;
     overflow: scroll;
+    justify-content: flex-end;
     &::-webkit-scrollbar {
       display: none;
     }
     & > * {
-      min-height: 20px;
+      min-height: 40px;
       flex: 1 auto 100%;
     }
   }

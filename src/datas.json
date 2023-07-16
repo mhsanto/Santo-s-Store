@@ -3,7 +3,7 @@
     "_id": "64a59bb9af51be8b9ad23a1b",
     "isActive": false,
     "price": 6.99,
-    "imagePath": "..\\public\\images\\breakfast\\breakfast1.png",
+    "imagePath": "../../Images/breakfast/breakfast1.png",
     "name": "Bagel and cream cheese",
     "details": "Eu et dolore dolor in nisi id reprehenderit non. Duis nulla in ad ipsum laboris eu minim reprehenderit mollit. Enim veniam proident magna mollit minim irure est cupidatat. Aliqua laborum nostrud ad officia non. Elit voluptate laborum sint voluptate aute cupidatat eiusmod. Nostrud elit id consequat voluptate do.\r\n",
     "category": "breakfast"
@@ -12,7 +12,7 @@
     "_id": "64a59bb9ef45fda71fb790c9",
     "isActive": false,
     "price": 9.99,
-    "imagePath": "..\\public\\images\\breakfast\\breakfast2.png",
+    "imagePath": "../../Images/breakfast/breakfast2.png",
     "name": "Breakfast sandwich",
     "details": "Ea enim anim pariatur ex fugiat dolore culpa nisi proident proident. In consectetur veniam nulla duis anim esse laboris aute ullamco aliquip nostrud nisi et cillum. Eiusmod non amet et deserunt duis duis labore occaecat sunt tempor ex tempor.\r\n",
     "category": "breakfast"
@@ -21,7 +21,7 @@
     "_id": "64a59bb99b30389df6373a6c",
     "isActive": false,
     "price": 10.99,
-    "imagePath": "..\\public\\images\\breakfast\\breakfast3.png",
+    "imagePath": "../../Images/breakfast/breakfast3.png",
     "name": "Baked Chicken",
     "details": "Id pariatur duis mollit sint nostrud nisi veniam occaecat anim nostrud cupidatat cupidatat. Velit cillum commodo adipisicing sint eu reprehenderit. Fugiat laboris id irure proident deserunt. Mollit id tempor consequat nostrud sit reprehenderit ea dolor occaecat eu ut minim. Ullamco ullamco consectetur veniam amet consequat. Irure nisi officia consectetur duis amet eu elit est fugiat. Laboris commodo eiusmod minim nostrud proident ea consequat aute irure cillum magna enim.\r\n",
     "category": "breakfast"
@@ -30,7 +30,7 @@
     "_id": "64a59bb9cbfe3d6adf342361",
     "isActive": true,
     "price": 8.99,
-    "imagePath": "..\\public\\images\\breakfast\\breakfast4.png",
+    "imagePath": "../../Images/breakfast/breakfast4.png",
     "name": "Eggs Benedict",
     "details": "Lorem excepteur velit qui mollit laboris pariatur sunt fugiat sunt aliquip ex. Elit ipsum occaecat officia reprehenderit do pariatur excepteur fugiat pariatur magna minim. Magna cupidatat irure proident incididunt pariatur qui culpa anim tempor elit. Quis duis dolore ex velit incididunt nisi fugiat est eiusmod. Exercitation adipisicing culpa Lorem sint aliquip anim nisi. Id eu id aliquip ex laborum veniam quis labore nisi.\r\n",
     "category": "breakfast"
@@ -39,7 +39,7 @@
     "_id": "64a59bb9a5f51fd6c31f86f6",
     "isActive": false,
     "price": 19.99,
-    "imagePath": "..\\public\\images\\breakfast\\breakfast5.png",
+    "imagePath": "../../Images/breakfast/breakfast5.png",
     "name": "Toast Croissant Fried egg",
     "details": "Incididunt eu fugiat culpa elit duis reprehenderit ea commodo veniam tempor consectetur enim. Laborum irure ad ut nostrud proident quis. Sit incididunt ea laborum labore ea in. Voluptate sit laborum fugiat culpa enim aliquip excepteur enim culpa proident pariatur consequat.\r\n",
     "category": "breakfast"
@@ -48,7 +48,7 @@
     "_id": "64a59bb956c6098159bbedfa",
     "isActive": true,
     "price": 3.99,
-    "imagePath": "..\\public\\images\\breakfast\\breakfast6.png",
+    "imagePath": "../../Images/breakfast/breakfast6.png",
     "name": "Full Breakfast Fried Egg Toast Brunch",
     "details": "Nisi non sunt fugiat laborum magna nulla ut eu cillum elit ullamco. Occaecat sint consequat est cupidatat adipisicing aute elit do reprehenderit est. Velit occaecat fugiat adipisicing culpa commodo consequat et culpa esse sunt consequat. Ut labore consequat quis minim. Duis occaecat cupidatat elit magna ex fugiat elit. Pariatur proident cillum sunt deserunt incididunt ad proident ex ullamco ea fugiat consequat tempor in. Esse reprehenderit proident sit irure excepteur id labore mollit eu pariatur sint proident.\r\n",
     "category": "breakfast"
@@ -57,7 +57,7 @@
     "_id": "64a59d1af80e86fec7b2bb44",
     "isActive": true,
     "price": 9.99,
-    "imagePath": "..\\public\\images\\dinner\\dinner1.png",
+    "imagePath": "../../Images/dinner/dinner1.png",
     "name": "Salmon with Grapefruit and Lentil Salad",
     "details": "Dolor nostrud sit amet fugiat. In quis officia culpa mollit elit id nostrud dolor veniam adipisicing incididunt fugiat enim. Esse proident nostrud ea minim reprehenderit reprehenderit duis et. Elit duis incididunt exercitation ut. Sint anim consectetur quis ipsum occaecat ullamco duis voluptate. Aliquip minim Lorem sit ut velit et ut minim anim laborum eu aliqua ad.\r\n",
     "category": "dinner"
@@ -66,7 +66,7 @@
     "_id": "64a59d1a614a03c5a37b419a",
     "isActive": false,
     "price": 10.99,
-    "imagePath": "..\\public\\images\\dinner\\dinner2.png",
+    "imagePath": "../../Images/dinner/dinner2.png",
     "name": "Lemony Salmon Piccata",
     "details": "Ut ut proident excepteur est veniam proident dolor ipsum. Quis ea dolore voluptate fugiat ut. Eu tempor consequat aliquip id exercitation. Dolor sint proident laboris proident.\r\n",
     "category": "dinner"
@@ -75,7 +75,7 @@
     "_id": "64a59d1a3f26a6fb684b2843",
     "isActive": true,
     "price": 12.99,
-    "imagePath": "..\\public\\images\\dinner\\dinner3.png",
+    "imagePath": "../../Images/dinner/dinner3.png",
     "name": "Pork Tenderioin With Quinoa Pilaf",
     "details": "Qui pariatur laboris do amet aute occaecat est amet. Excepteur deserunt commodo ullamco commodo nisi aliquip ea officia dolor. Enim nostrud velit nulla nisi aliqua amet est excepteur magna ut nostrud ad. Adipisicing consectetur do quis eiusmod est enim nulla laborum anim eiusmod sit culpa proident. Et voluptate non nisi elit excepteur pariatur ullamco culpa et. Non cupidatat id voluptate minim irure incididunt enim sunt aliquip magna amet. Dolore aute duis dolore mollit culpa esse dolore qui velit aliquip culpa amet do.\r\n",
     "category": "dinner"
@@ -84,7 +84,7 @@
     "_id": "64a59d1ae828b5467794ce37",
     "isActive": false,
     "price": 8.99,
-    "imagePath": "..\\public\\images\\dinner\\dinner4.png",
+    "imagePath": "../../Images/dinner/dinner4.png",
     "name": "French fries with Cheese",
     "details": "Nostrud pariatur irure incididunt est nostrud irure veniam in minim. Sint pariatur culpa proident commodo officia eu elit duis sit irure. Dolor adipisicing quis ad magna consequat qui tempor occaecat nostrud velit. Minim pariatur et consectetur laborum officia. Ullamco exercitation enim sit veniam sunt ipsum sit consequat elit mollit sunt consequat cillum.\r\n",
     "category": "dinner"
@@ -93,7 +93,7 @@
     "_id": "64a59d1a185736fc98385769",
     "isActive": false,
     "price": 6.99,
-    "imagePath": "..\\public\\images\\dinner\\dinner5.png",
+    "imagePath": "../../Images/dinner/dinner5.png",
     "name": "Garlic Butter Baked Salmon",
     "details": "Duis eiusmod excepteur ad amet enim. Sit consequat aliqua ea aute et non et eiusmod nisi excepteur minim in. In ullamco non dolore laboris ullamco consectetur irure minim dolor. Proident enim minim elit qui non eu exercitation culpa quis laboris.\r\n",
     "category": "dinner"
@@ -102,7 +102,7 @@
     "_id": "64a59d1a3147471657020388",
     "isActive": false,
     "price": 9.99,
-    "imagePath": "..\\public\\images\\dinner\\dinner6.png",
+    "imagePath": "../../Images/dinner/dinner6.png",
     "name": "Baked Chicken",
     "details": "Voluptate laborum commodo commodo veniam. In cupidatat eiusmod cupidatat mollit magna aliquip ipsum officia commodo non quis. Eiusmod dolor esse eiusmod nostrud eiusmod elit laboris ad eiusmod est consectetur dolore.\r\n",
     "category": "dinner"
@@ -111,7 +111,7 @@
     "_id": "64a59ec1fd7762a4ba717b03",
     "isActive": false,
     "price": 23.99,
-    "imagePath": "..\\public\\images\\lunch\\lunch1.png",
+    "imagePath": "../../Images/lunch/lunch1.png",
     "name": "Healthy Meal Plan",
     "details": "Dolore incididunt eu nisi voluptate. Sunt esse tempor qui cupidatat minim elit. In amet adipisicing eiusmod consequat tempor aliquip ex duis culpa adipisicing mollit fugiat cupidatat. Non elit adipisicing veniam proident nulla qui cupidatat pariatur consequat non cupidatat cillum elit.\r\n",
     "category": "lunch"
@@ -120,7 +120,7 @@
     "_id": "64a59ec18d36027492bcf9ac",
     "isActive": false,
     "price": 9.99,
-    "imagePath": "..\\public\\images\\lunch\\lunch2.png",
+    "imagePath": "../../Images/lunch/lunch2.png",
     "name": "Fried Chicked Bento",
     "details": "Velit esse elit exercitation laboris adipisicing nulla officia fugiat minim anim. Cillum eiusmod qui veniam minim. Officia est eu fugiat et eiusmod consequat pariatur aliqua. Officia in consectetur in occaecat nisi eu eu do labore irure sunt. Non elit aliquip exercitation pariatur reprehenderit. Est aute laborum Lorem mollit.\r\n",
     "category": "lunch"
@@ -129,7 +129,7 @@
     "_id": "64a59ec1e67cd60df6f5c386",
     "isActive": false,
     "price": 6.99,
-    "imagePath": "..\\public\\images\\lunch\\lunch3.png",
+    "imagePath": "../../Images/lunch/lunch3.png",
     "name": "Tarragon-Rubbed-Salmon",
     "details": "Qui reprehenderit cupidatat consectetur do consectetur. Officia Lorem do enim ea ad duis elit velit. Magna exercitation dolore enim deserunt fugiat.\r\n",
     "category": "lunch"
@@ -138,7 +138,7 @@
     "_id": "64a59ec16bad1c87f6951e77",
     "isActive": false,
     "price": 8.99,
-    "imagePath": "..\\public\\images\\lunch\\lunch4.png",
+    "imagePath": "../../Images/lunch/lunch4.png",
     "name": "Indian Lunch",
     "details": "Est nulla quis proident voluptate aliquip minim occaecat enim proident. Elit magna do reprehenderit culpa. Eu irure deserunt magna elit quis veniam duis.\r\n",
     "category": "lunch"
@@ -147,7 +147,7 @@
     "_id": "64a59ec14ea700fe7617756b",
     "isActive": true,
     "price": 15.99,
-    "imagePath": "..\\public\\images\\lunch\\lunch5.png",
+    "imagePath": "../../Images/lunch/lunch5.png",
     "name": "Beef Steak",
     "details": "Sit deserunt consequat consectetur ut. Ullamco adipisicing non velit laborum aliqua. Proident non ullamco non deserunt et deserunt magna fugiat ut. Dolore sunt consectetur excepteur ullamco. Commodo ipsum id enim dolor ipsum. Minim irure est esse Lorem ea aliqua id cillum incididunt ut cupidatat laborum laborum.\r\n",
     "category": "lunch"
@@ -156,7 +156,7 @@
     "_id": "64a59ec1af2991f9ad4533a2",
     "isActive": true,
     "price": 7.99,
-    "imagePath": "..\\public\\images\\lunch\\lunch6.png",
+    "imagePath": "../../Images/lunch/lunch6.png",
     "name": "Honey-Soy-Glazed Salmon with Peppers",
     "details": "Dolor fugiat voluptate eiusmod velit pariatur enim amet. Cupidatat consequat consectetur do cillum cupidatat pariatur est elit proident anim est mollit. Adipisicing in dolore cillum exercitation aliqua occaecat dolore officia commodo Lorem labore nulla adipisicing consequat. Ullamco anim laborum voluptate ex velit officia non cupidatat cupidatat sint quis irure exercitation.\r\n",
     "category": "lunch"
