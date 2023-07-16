@@ -1,4 +1,5 @@
 import BannerImage from "../../assets/images/others/bannerbackground.png";
+import React from "react";
 import { styled } from "styled-components";
 const Banner = () => {
   return (

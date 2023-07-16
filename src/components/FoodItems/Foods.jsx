@@ -1,4 +1,5 @@
 import { styled } from "styled-components";
+import React from "react";
 import foodData from "../../../datas.json";
 import { Container } from "../../GlobalStyle";
 import FoodContainer from "./FoodContainer";
