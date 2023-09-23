@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from "react";
 import BikeImage from "../../../public/deliveryBoy.svg";
-import userphoto from "../../assets/images/others/user.png";
 import { styled } from "styled-components";
 import { onAuthStateChanged } from "firebase/auth";
 import { firebaseAuth } from "../../firebase";
