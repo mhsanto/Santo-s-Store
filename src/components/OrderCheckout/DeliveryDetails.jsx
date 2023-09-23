@@ -1,7 +1,9 @@
 import React, { useEffect, useState } from "react";
-import BikeImage from "../../assets/images/others/bike.png";
+import BikeImage from "../../../public/deliveryBoy.svg";
 import userphoto from "../../assets/images/others/user.png";
 import { styled } from "styled-components";
+import { onAuthStateChanged } from "firebase/auth";
+import { firebaseAuth } from "../../firebase";
 
 const DeliveryDetails = ({ name, email, userAddresses }) => {
   const [time, setTime] = useState(new Date());
@@ -16,6 +18,7 @@ const DeliveryDetails = ({ name, email, userAddresses }) => {
   const futureTime = new Date(time.getTime() + 30 * 60000);
 
   const formateFutureTime = futureTime.toLocaleTimeString([], options);
+
   return (
     <>
       <Imagediv>
@@ -37,7 +40,7 @@ const DeliveryDetails = ({ name, email, userAddresses }) => {
 
         <div>
           <h5>Shop Address</h5>
-          <Paragraph>Gulshan Plaza Restaura GPR</Paragraph>
+          <Paragraph>Random Street In Uttora</Paragraph>
         </div>
       </LocationDetails>
       <div style={{ padding: "1rem" }}>
@@ -46,9 +49,6 @@ const DeliveryDetails = ({ name, email, userAddresses }) => {
       </div>
 
       <UserName>
-        <div>
-          <img src={userphoto} alt="" />
-        </div>
         <div>
           <h5>{name ? name : "unknown user"}</h5>
           <Paragraph>{email}</Paragraph>
@@ -83,7 +83,7 @@ const UserName = styled.div`
   display: flex;
   background-color: #fff;
   padding: 0.3rem 1rem;
-
+  justify-content: center;
   align-items: center;
   border-radius: 10px;
   gap: 0.7rem;

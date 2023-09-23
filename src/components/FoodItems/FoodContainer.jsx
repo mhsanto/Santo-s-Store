@@ -32,8 +32,15 @@ const FlexContainer = styled.div`
   }
 `;
 const Card = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
   text-align: center;
   padding: 1rem 0;
+  &:hover img {
+    transform: scale(1.1);
+  }
   @media (max-width: 300px) {
     padding: 0 1rem;
   }
@@ -42,7 +49,12 @@ const Card = styled.div`
   }
   img {
     max-width: 100%;
-    width: 190px;
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+    transition: 0.3s ease-in-out;
+    aspect-ratio: 12 / 9;
+    /* width: 190px; */
   }
 `;
 

@@ -14,6 +14,7 @@ const LoginForm = ({ onSubmit }) => {
 
   return (
     <FormField onSubmit={handleSubmit(onSubmit)}>
+      <h2>Login to your account</h2>
       {/* //email field */}
       <input type="email" placeholder="email" {...register("email")} />
       {errors.email?.message && <p>{errors.email?.message}</p>}
@@ -29,6 +30,7 @@ const LoginForm = ({ onSubmit }) => {
 const FormField = styled.form`
   display: flex;
   flex-direction: column;
+  align-items: center;
   gap: 1rem;
   p {
     font-size: 13px;
@@ -44,7 +46,7 @@ const FormField = styled.form`
     max-width: 100%;
     border: none;
     padding: 1rem;
-    background-color: #fff;
+    background-color: #cbbfbfa1;
     font-size: 1.1rem;
 
     &:focus {

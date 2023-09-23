@@ -1,14 +1,15 @@
 import React from "react";
 import Background from "./Background";
-import Logo from "../../assets/images/others/logoTwo.png";
+import logo from "../../../public/logo-no-background.svg";
 import { styled } from "styled-components";
 import Form from "./Form";
 const HandleAuthentication = () => {
   return (
     <>
       <Background />
+
       <Section>
-        <img src={Logo} alt="red onion logo" />
+        <img src={logo} alt="Santo Store logo" />
         <Form />
       </Section>
     </>

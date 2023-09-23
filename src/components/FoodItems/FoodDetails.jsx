@@ -34,7 +34,11 @@ const FoodDetails = () => {
       <FoodContainer>
         <FoodDetail>
           <h1>{name}</h1>
-          <p>{details}</p>
+          <p>
+            {details}orem ipsum dolor sit, amet consectetur adipisicing elit.
+            Harum consequuntur culpa accusamus saepe excepturi minima porro
+            officiis eos totam. Voluptatem.
+          </p>
           <div style={{ display: "flex", gap: "1.1rem" }}>
             <span>${price}</span>
           </div>

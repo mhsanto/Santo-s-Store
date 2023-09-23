@@ -5,9 +5,8 @@ import Navbar from "./components/Navbar";
 import ErrorPage from "./components/ErrorPage";
 import FoodDetails from "./components/FoodItems/FoodDetails";
 import Delivery from "./components/FoodItems/Delivery/Delivery";
-import Home from "./components/HomePage/Home";
+import Home from "./components/About_Us/Home";
 import CheckoutPage from "./components/OrderCheckout/CheckoutPage";
-import Services from "./components/HomePage/Services";
 import Terms from "./components/Footer/Terms";
 import Condition from "./components/Footer/Condition";
 import HandleAuthentication from "./components/LoginPage/HandleAuthentication";
@@ -28,7 +27,6 @@ const App = () => {
         <Route path="/food/checkout" element={<CheckoutPage />} />
 
         <Route path="/login" element={<HandleAuthentication />} />
-        <Route path="/about-us/services/:id" element={<Services />} />
         <Route path="/footer/terms" element={<Terms />} />
         <Route path="/footer/condition" element={<Condition />} />
 

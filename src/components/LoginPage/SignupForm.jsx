@@ -16,6 +16,7 @@ const SignupForm = ({ onSubmit }) => {
 
   return (
     <FormField onSubmit={handleSubmit(onSubmit)}>
+      <h1>Create a new Account</h1>
       <input type="text" placeholder="Full Name" {...register("fullName")} />
       {errors.fullName?.message && <p>{errors.fullName?.message}</p>}
 
@@ -42,6 +43,7 @@ const SignupForm = ({ onSubmit }) => {
 const FormField = styled.form`
   display: flex;
   flex-direction: column;
+  align-items: center;
   gap: 1rem;
   p {
     font-size: 13px;
@@ -59,6 +61,7 @@ const FormField = styled.form`
     padding: 1rem;
     background-color: #fff;
     font-size: 1.1rem;
+    background-color: #cbbfbfa1;
 
     &:focus {
       outline: none;

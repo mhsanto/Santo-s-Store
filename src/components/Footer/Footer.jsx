@@ -10,7 +10,7 @@ const Footer = () => {
       <Container>
         <FlexContainer>
           <CopyRight>
-            <img src={logo} alt="red Onion Logo" />
+            <img src={logo} alt="Santo Store Logo" />
             <p>Copyright @{year} Mahmodul Hasan Santo</p>
           </CopyRight>
           <Labels />

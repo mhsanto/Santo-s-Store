@@ -35,6 +35,6 @@ const Main = styled.main`
   padding: 1.5rem;
   margin: 60px auto;
   border-radius: 10px;
-  max-width: 18rem;
+  /* max-width: 18rem; */
 `;
 export default CheckoutPage;

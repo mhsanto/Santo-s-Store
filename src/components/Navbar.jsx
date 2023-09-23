@@ -8,6 +8,7 @@ import { useEffect, useState } from "react";
 import { onAuthStateChanged, signOut } from "firebase/auth";
 import { firebaseAuth } from "../firebase";
 import { BiSearchAlt } from "react-icons/bi";
+import { PiSignOutBold } from "react-icons/pi";
 import { TbZoomCancel } from "react-icons/tb";
 const Navbar = () => {
   const [isUser, setIsUser] = useState(false);
@@ -84,7 +85,7 @@ const Navbar = () => {
                   setIsUser(false);
                 }}
               >
-                Logout
+                <PiSignOutBold/>
               </button>
             )}
           </AuthenticationSection>
@@ -126,15 +127,19 @@ const AuthenticationSection = styled.div`
   align-items: center;
   gap: 1.4rem;
   button {
+    display: flex;
+    align-items: center;
     font-size: 0.9rem;
     font-weight: 500;
     background-color: transparent;
     border: none;
+    transition: background-color .3s;
     cursor: pointer;
-
     border-radius: 50px;
     &:hover {
       opacity: 0.8;
+      background-color: var(--primary-color);
+      color: white;
     }
   }
 

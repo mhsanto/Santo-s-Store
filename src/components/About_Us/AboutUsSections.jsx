@@ -1,8 +1,9 @@
 import { styled } from "styled-components";
-import React from "react";
+import React, { useState } from "react";
 import { AiOutlineArrowRight } from "react-icons/ai";
 import { useNavigate } from "react-router-dom";
 const AboutUsSections = ({ data: { id, img, icon, title, content, more } }) => {
+  const [show, setShow] = useState(false);
   const navigate = useNavigate();
   return (
     <DataSection key={id}>
@@ -11,17 +12,24 @@ const AboutUsSections = ({ data: { id, img, icon, title, content, more } }) => {
       </div>
 
       <div className="icons">
-        <div>
-          <img src={icon} alt="icons" />
-        </div>
-
         <div className="flex">
           <h4>{title}</h4>
-          <p>{content.slice(0, 202)}...</p>
-          <Button onClick={() => navigate(`/about-us/services/${id}`)}>
-            {more}
-            <AiOutlineArrowRight size={20} color="white" />
-          </Button>
+          {!show ? (
+            <>
+              {" "}
+              <p>{content.slice(0, 202)}...</p>{" "}
+              <Button onClick={() => setShow(!show)}>
+                Show more info<AiOutlineArrowRight size={20} color="white" />
+              </Button>
+            </>
+          ) : (
+            <>
+              <p>{content}</p>
+              <Button onClick={() => setShow(!show)}>
+                show less  <AiOutlineArrowRight size={20} color="white" />
+              </Button>
+            </>
+          )}
         </div>
       </div>
     </DataSection>

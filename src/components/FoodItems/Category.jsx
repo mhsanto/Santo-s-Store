@@ -1,27 +1,29 @@
 import React from "react";
 import { styled } from "styled-components";
-
+import { ImHeadphones } from "react-icons/im";
+import { BsFillEarFill, BsSpeakerFill } from "react-icons/bs";
 const Categories = ({ selectedCategory, setSelectedCategory }) => {
   return (
     <>
-     <Category>
+      <Category>
         <p
           className={selectedCategory === "headphones" ? "selected" : ""}
           onClick={() => setSelectedCategory("headphones")}
         >
-          Headphones
+          <ImHeadphones /> Headphones
         </p>
         <p
           className={selectedCategory === "speakers" ? "selected" : ""}
           onClick={() => setSelectedCategory("speakers")}
         >
+          <BsSpeakerFill />
           Speakers
         </p>
         <p
           onClick={() => setSelectedCategory("earphones")}
           className={selectedCategory === "earphones" ? "selected" : ""}
         >
-          Earphones
+          <BsFillEarFill /> Earphones
         </p>
       </Category>
     </>
@@ -33,7 +35,7 @@ const Category = styled.div`
   flex-wrap: wrap;
   justify-content: space-between;
   padding-top: 3rem;
-  max-width: 20rem;
+  max-width: 30rem;
   margin-inline: auto;
   overflow: hidden;
   @media (max-width: 380px) {
@@ -41,6 +43,10 @@ const Category = styled.div`
     gap: 1rem;
   }
   p {
+    display: flex;
+    align-items: center;
+    gap:2px;
+    font-size: 1.3rem;
     border-bottom: 3px solid transparent;
     font-weight: 500;
     position: relative;

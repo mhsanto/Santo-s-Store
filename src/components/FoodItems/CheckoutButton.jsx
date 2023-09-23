@@ -21,7 +21,7 @@ const CheckoutButton = () => {
         disabled={cartItem.length <= 0}
         className={cartItem.length > 0 ? "primary" : "disabled"}
       >
-        Check out your food
+        Go to check-in page
       </button>
     </OrderCheckOut>
   );

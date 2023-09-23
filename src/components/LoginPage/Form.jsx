@@ -66,36 +66,6 @@ const Form = () => {
     </>
   );
 };
-const FormField = styled.form`
-  display: flex;
-  flex-direction: column;
-  gap: 1rem;
-  p {
-    font-size: 13px;
-    max-width: fit-content;
-    color: red;
-    margin-top: -8px;
-    padding: 0 0.5rem;
-    font-weight: 500;
-  }
-  input {
-    border-radius: 8px;
-    width: 20rem;
-    max-width: 100%;
-    border: none;
-    padding: 1rem;
-    background-color: #fff;
-    font-size: 1.1rem;
-
-    &:focus {
-      outline: none;
-    }
-    &::placeholder {
-      font-size: 0.875rem;
-      text-transform: capitalize;
-    }
-  }
-`;
 
 const Paragraph = styled.p`
   color: var(--primary-color);

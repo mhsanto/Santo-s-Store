@@ -3,7 +3,7 @@ import { Container } from "../../GlobalStyle";
 
 const Terms = () => {
   return (
-    <Container style={{ lineHeight: 1.7 }}>
+    <Container style={{ lineHeight: 2,}}>
       <h1 style={{ textAlign: "center" }}> Privacy Policy</h1>
       Information We Collect a. Personal Information: We may collect personal
       information, such as your name, contact details, delivery address, and

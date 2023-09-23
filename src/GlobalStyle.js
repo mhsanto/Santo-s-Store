@@ -3,7 +3,7 @@ import { createGlobalStyle, styled } from "styled-components";
 import "@fontsource-variable/montserrat";
 export const GlobalStyle = createGlobalStyle`
 :root{
-    --primary-color:#f91944;
+    --primary-color:blue;
 }
 *,*::after,*::before{
     margin:0;

@@ -7,11 +7,9 @@ const AboutUs = () => {
     <Container>
       <AboutUSContainer>
         <HeadLine>
-          <h1>Why you chose us</h1>
+          <h1>You want to know more About us?</h1>
           <p>
-            Barton waited twenty always repair in within we do.An delighted
-            offending curiosity my is dashwoods at.Boy prosperous increasing
-            surrounded
+          
           </p>
         </HeadLine>
         <SimilarSections />
