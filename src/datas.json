@@ -4,7 +4,7 @@
     "name": "Beats_Electronics",
     "details": "Beats Electronics Noise-cancelling headphones Audio, headphone, electronics, electronic Device, sound",
     "price": "88.11",
-    "imagePath": "../public/Images/headphones/Beats_Electronics.png",
+    "imagePath": "./Images/headphones/Beats_Electronics.png",
     "category": "headphones"
   },
   {
@@ -12,7 +12,7 @@
     "name": "Gold Headphone 3D Computer Graphics",
     "details": "Headphones graphy, Gold Headphones, electronics, 3D Computer Graphics, gold Coin png-min",
     "price": "96.71",
-    "imagePath": "../public/Images/headphones/Gold_Headphone_3D_Computer_Graphics.png",
+    "imagePath": "./Images/headphones/Gold_Headphone_3D_Computer_Graphics.png",
     "category": "headphones"
   },
   {
@@ -20,7 +20,7 @@
     "name": "Headset Xbox 360 Headphones Gamer Wireless",
     "details": "Headset Xbox 360 Headphones Gamer Wireless, headphones, electronics, playStation 4, _video Game",
     "price": "183.93",
-    "imagePath": "../public/Images/headphones/Headset_Xbox_360_Headphones.png",
+    "imagePath": "./Images/headphones/Headset_Xbox_360_Headphones.png",
     "category": "headphones"
   },
   {
@@ -28,7 +28,7 @@
     "name": "JBL T450 Headphones Wireless Audio",
     "details": "JBL T450 Headphones Wireless Audio, headphones, blue, electronics, bluetooth",
     "price": "47.51",
-    "imagePath": "../public/Images/headphones/JBL_T450_Headphones.png",
+    "imagePath": "./Images/headphones/JBL_T450_Headphones.png",
     "category": "headphones"
   },
   {
@@ -36,7 +36,7 @@
     "name": "red Beats by Dr. Dre wireless headphones",
     "details": "red Beats by Dr. Dre wireless headphones, Headphones Beats Electronics Microphone Sound Disc jockey, Headphone, electronics, recording Studio, musician",
     "price": "36.58",
-    "imagePath": "../public/Images/headphones/red_Beats.png",
+    "imagePath": "./Images/headphones/red_Beats.png",
     "category": "headphones"
   },
   {
@@ -44,7 +44,7 @@
     "name": "red wireless headphones",
     "details": "red wireless headphones, wearing, headphones, red headphones",
     "price": "134.62",
-    "imagePath": "../public/Images/headphones/red_wireless.png",
+    "imagePath": "./Images/headphones/red_wireless.png",
     "category": "headphones"
   },
   {
@@ -52,7 +52,7 @@
     "name": "AirPods Headphones Headset Wireless iPhone",
     "details": "AirPods Headphones Headset Wireless iPhone, headphones, angle, electronics, bluetooth",
     "price": "90.16",
-    "imagePath": "../public/Images/earphones/AirPods_Headphones.png",
+    "imagePath": "./Images/earphones/AirPods_Headphones.png",
     "category": "earphones"
   },
   {
@@ -60,7 +60,7 @@
     "name": "black Bluetooth neck band, Headphones Bluetooth Wireless",
     "details": "black Bluetooth neck band, Headphones Bluetooth Wireless Sol Republic Headset, Earphone, electronics, microphone, cable",
     "price": "21.29",
-    "imagePath": "../public/Images/earphones/black_Bluetooth.png",
+    "imagePath": "./Images/earphones/black_Bluetooth.png",
     "category": "earphones"
   },
   {
@@ -68,7 +68,7 @@
     "name": "black earbuds, Battery charger Mobile Phone Accessories iPhone Headset",
     "details": "black earbuds, Battery charger Mobile Phone Accessories iPhone Headset Bluetooth, Earphone, electronics, telephone Call, computer",
     "price": "35.60",
-    "imagePath": "../public/Images/earphones/black_earbuds.png",
+    "imagePath": "./Images/earphones/black_earbuds.png",
     "category": "earphones"
   },
   {
@@ -76,7 +76,7 @@
     "name": "Headphones Jabra Microphone Mobile Phones Headset",
     "details": "Headphones Jabra Microphone Mobile Phones Headset, headphones, electronics, microphone, bluetooth",
     "price": "113.36",
-    "imagePath": "../public/Images/earphones/Headphones_Jabra.png",
+    "imagePath": "./Images/earphones/Headphones_Jabra.png",
     "category": "earphones"
   },
   {
@@ -84,7 +84,7 @@
     "name": "Headphones JBL Mobile Phones Wireless Bluetooth",
     "details": "Headphones JBL Mobile Phones Wireless Bluetooth, bluetooth, stereophonic Sound, internet, electronic Device",
     "price": "129.52",
-    "imagePath": "../public/Images/earphones/Headphones_JBL.png",
+    "imagePath": "./Images/earphones/Headphones_JBL.png",
     "category": "earphones"
   },
   {
@@ -92,7 +92,7 @@
     "name": "Headphones Mobile Phones Plantronics Bluetooth Audio",
     "details": "Headphones Mobile Phones Plantronics Bluetooth Audio, ear, electronics, people, bluetooth",
     "price": "72.81",
-    "imagePath": "../public/Images/earphones/Headphones_Mobile.png",
+    "imagePath": "./Images/earphones/Headphones_Mobile.png",
     "category": "earphones"
   },
   {
@@ -100,7 +100,7 @@
     "name": "black PA speaker, Electro-Voice Loudspeaker Powered speakers ",
     "details": "black PA speaker, Electro-Voice Loudspeaker Powered speakers Subwoofer Audio, audio speakers, electronics, speaker, car Subwoofer",
     "price": "130.42",
-    "imagePath": "../public/Images/speakers/black_PA_speaker.png",
+    "imagePath": "./Images/speakers/black_PA_speaker.png",
     "category": "speakers"
   },
   {
@@ -108,7 +108,7 @@
     "name": "Computer speakers Studio monitor Subwoofer Loudspeaker ",
     "details": "Computer speakers Studio monitor Subwoofer Loudspeaker JBL Professional PRX81, others, electronics, speaker, car Subwoofer",
     "price": "115.72",
-    "imagePath": "../public/Images/speakers/Computer_speakers.png",
+    "imagePath": "./Images/speakers/Computer_speakers.png",
     "category": "speakers"
   },
   {
@@ -116,7 +116,7 @@
     "name": "Loudspeaker enclosure Stereophonic sound Amplifier Subwoofer",
     "details": "Loudspeaker enclosure Stereophonic sound Amplifier Subwoofer, Music speakers, three black speakers, electronics, speaker, music Note",
     "price": "104.25",
-    "imagePath": "../public/Images/speakers/Loudspeaker_enclosure.png",
+    "imagePath": "./Images/speakers/Loudspeaker_enclosure.png",
     "category": "speakers"
   },
   {
@@ -124,7 +124,7 @@
     "name": "Loudspeaker Sencor Sound Power Wireless speaker sound system",
     "details": "Loudspeaker Sencor Sound Power Wireless speaker, sound system, electronics, car Subwoofer, sound",
     "price": "50.37",
-    "imagePath": "../public/Images/speakers/Loudspeaker_Sencor.png",
+    "imagePath": "./Images/speakers/Loudspeaker_Sencor.png",
     "category": "speakers"
   },
   {
@@ -132,7 +132,7 @@
     "name": "Microphone Loudspeaker Public Address Systems Behringer Powered speakers",
     "details": "Microphone Loudspeaker Public Address Systems Behringer Powered speakers, Speaker, electronics, microphone, speaker",
     "price": "71.98",
-    "imagePath": "../public/Images/speakers/Microphone_Loudspeaker.png",
+    "imagePath": "./Images/speakers/Microphone_Loudspeaker.png",
     "category": "speakers"
   },
   {
@@ -140,7 +140,7 @@
     "name": "Subwoofer Sound Audio power Loudspeaker LED-backlit LCD",
     "details": "Subwoofer Sound Audio power Loudspeaker LED-backlit LCD, others, television, electronics, speaker",
     "price": "28.92",
-    "imagePath": "../public/Images/speakers/Subwoofer_Sound.png",
+    "imagePath": "./Images/speakers/Subwoofer_Sound.png",
     "category": "speakers"
   }
 ]
