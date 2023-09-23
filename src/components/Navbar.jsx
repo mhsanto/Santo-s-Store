@@ -1,5 +1,5 @@
 import { styled } from "styled-components";
-import LogoPic from "../assets/images/others/logoTwo.png";
+import LogoPic from "../../public/logo-no-background.svg";
 import { Container } from "../GlobalStyle";
 import { AiOutlineShoppingCart } from "react-icons/ai";
 import { useNavigate } from "react-router-dom";
@@ -7,12 +7,13 @@ import { useSelector } from "react-redux";
 import { useEffect, useState } from "react";
 import { onAuthStateChanged, signOut } from "firebase/auth";
 import { firebaseAuth } from "../firebase";
-
+import { BiSearchAlt } from "react-icons/bi";
+import { TbZoomCancel } from "react-icons/tb";
 const Navbar = () => {
   const [isUser, setIsUser] = useState(false);
   const navigate = useNavigate();
   const cartItem = useSelector((state) => state.cart);
-
+  const [show, setShow] = useState(false);
   const [items, setItems] = useState(null);
   useEffect(() => {
     const total = cartItem.reduce((total, item) => total + item.quantity, 0);
@@ -38,6 +39,26 @@ const Navbar = () => {
           <Logo onClick={() => navigate("/")}>
             <img src={LogoPic} alt="Logo" />
           </Logo>
+
+          <InputBox className="inputBox">
+            {!show ? (
+              <BiSearchAlt
+                size={30}
+                cursor="pointer"
+                onClick={() => setShow(!show)}
+              />
+            ) : (
+              <>
+                <input type="text" placeholder="Search food items" />{" "}
+                <BiSearchAlt size={30} cursor="pointer" />
+                <TbZoomCancel
+                  size={20}
+                  cursor="pointer"
+                  onClick={() => setShow(!show)}
+                />
+              </>
+            )}
+          </InputBox>
 
           <AuthenticationSection>
             <Cart
@@ -77,20 +98,19 @@ const Nav = styled.nav`
   display: flex;
   justify-content: space-between;
   align-items: center;
-  height: 3.75rem;
-
+  border-bottom: 2px solid rgba(252, 240, 1, 0.556);
   position: sticky;
   background-color: #fff;
   width: 100%;
   align-items: center;
   z-index: 55;
   top: 0;
-  /* overflow: hidden; */
 `;
 const Header = styled.header`
   display: flex;
   justify-content: space-between;
   align-items: center;
+  padding: .3rem 0;
 `;
 const Logo = styled.div`
   cursor: pointer;
@@ -146,5 +166,57 @@ const Cart = styled.button`
   gap: 0.2rem;
   text-align: center;
 `;
-
+const InputBox = styled.div`
+  padding: 0 0 0 0.2rem;
+  display: flex;
+  align-items: center;
+  /* background-color: steelblue; */
+  /* color: white; */
+  border-radius: 50px;
+  & > * {
+    flex-shrink: 1;
+  }
+  @media (max-width: 340px) {
+    flex-wrap: wrap;
+    gap: 0.2rem;
+    border-radius: 0px;
+    /* background-color: transparent; */
+  }
+  input {
+    padding: 0.6rem;
+    border-radius: 50px;
+    background-color: rgba(21, 15, 15, 0.089);
+    padding-left: 1rem;
+    font-size: 1rem;
+    border: none;
+    width: clamp(13.75rem, calc(11.96rem + 8.93vw), 20rem);
+    @media (max-width: 340px) {
+      /* background-color: white; */
+      width: 100%;
+    }
+    &:focus {
+      outline: none;
+    }
+    &::placeholder {
+      color: black;
+      opacity: 0.6;
+    }
+  }
+  .search {
+    padding: 0.75rem 1.7rem;
+    border: none;
+    border-radius: 50px;
+    color: white;
+    background-color: var(--primary-color);
+    @media (max-width: 480px) {
+      padding: 0.75rem 1rem;
+    }
+    @media (max-width: 340px) {
+      width: 100%;
+    }
+    &:hover {
+      opacity: 0.8;
+    }
+  }
+`;
 export default Navbar;

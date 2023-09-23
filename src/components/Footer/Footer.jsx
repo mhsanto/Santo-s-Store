@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import logo from "../../assets/images/others/logo.png";
+import logo from "../../../public/logo-no-background.svg";
 import { styled } from "styled-components";
 import Labels from "./Labels";
 import { Container } from "../../GlobalStyle";

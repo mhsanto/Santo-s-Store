@@ -4,24 +4,24 @@ import { styled } from "styled-components";
 const Categories = ({ selectedCategory, setSelectedCategory }) => {
   return (
     <>
-      <Category>
+     <Category>
         <p
-          className={selectedCategory === "dinner" ? "selected" : ""}
-          onClick={() => setSelectedCategory("dinner")}
+          className={selectedCategory === "headphones" ? "selected" : ""}
+          onClick={() => setSelectedCategory("headphones")}
         >
-          Dinner
+          Headphones
         </p>
         <p
-          className={selectedCategory === "lunch" ? "selected" : ""}
-          onClick={() => setSelectedCategory("lunch")}
+          className={selectedCategory === "speakers" ? "selected" : ""}
+          onClick={() => setSelectedCategory("speakers")}
         >
-          Lunch
+          Speakers
         </p>
         <p
-          onClick={() => setSelectedCategory("breakfast")}
-          className={selectedCategory === "breakfast" ? "selected" : ""}
+          onClick={() => setSelectedCategory("earphones")}
+          className={selectedCategory === "earphones" ? "selected" : ""}
         >
-          BreakFast
+          Earphones
         </p>
       </Category>
     </>

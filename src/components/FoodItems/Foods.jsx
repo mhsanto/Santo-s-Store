@@ -7,7 +7,7 @@ import Categories from "./Category";
 import CheckoutButton from "./CheckoutButton";
 
 const Foods = () => {
-  const [selectedCategory, setSelectedCategory] = useState("dinner");
+  const [selectedCategory, setSelectedCategory] = useState("headphones");
   const [foods, setFoods] = useState(foodData);
 
   const filterFoodByCategory = () => {

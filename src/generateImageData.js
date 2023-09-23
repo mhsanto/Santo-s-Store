@@ -1,7 +1,7 @@
 import fs from "fs";
 import path from "path";
-
-const photoFolderPath = "../public/images/lunch";
+import crypto from "crypto"
+const photoFolderPath = "../public/images/speakers";
 
 fs.readdir(photoFolderPath, (err, files) => {
   if (err) {
@@ -9,15 +9,19 @@ fs.readdir(photoFolderPath, (err, files) => {
     return;
   }
   const imagesData = files.map((fileName) => {
+    const id = crypto.randomUUID();
     const imagePath = path.join(photoFolderPath, fileName);
-    const name = ""; // Add the name for the image
+    const name = fileName; // Add the name for the image
     const details = ""; // Add the details for the image
-    const price = "";
+    const price = (Math.random() * 150).toFixed(2);
+    const category = "speakers";
     return {
+      id,
       name,
       details,
       price,
       imagePath,
+      category,
     };
   });
   const jsonData = JSON.stringify(imagesData);
