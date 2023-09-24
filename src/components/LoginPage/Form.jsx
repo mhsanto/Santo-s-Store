@@ -43,7 +43,7 @@ const Form = () => {
   useEffect(() => {
     onAuthStateChanged(firebaseAuth, (user) => {
       if (user) {
-        navigate("/food/checkout");
+        navigate("/product/checkout");
       }
     });
   }, []);
