@@ -1,20 +1,21 @@
 import { styled } from "styled-components";
-import foodData from "../../datas";
+import productsList from "../../datas";
 import { Container } from "../../GlobalStyle";
-import FoodContainer from "./FoodContainer";
+import ProductContainer from "./ProductContainer";
 import { useState } from "react";
 import Categories from "./Category";
 import CheckoutButton from "./CheckoutButton";
 
-const Foods = () => {
+const Products
+ = () => {
   const [selectedCategory, setSelectedCategory] = useState("headphones");
-  const [foods, setFoods] = useState(foodData);
+  const [products, setProducts] = useState(productsList);
 
-  const filterFoodByCategory = () => {
+  const filterProductByCategory = () => {
     if (selectedCategory) {
-      return foods.filter((food) => selectedCategory === food.category);
+      return products.filter((food) => selectedCategory === food.category);
     } else {
-      return foods;
+      return products;
     }
   };
 
@@ -26,8 +27,8 @@ const Foods = () => {
       />
 
       <FoodStorage>
-        {filterFoodByCategory().map((food) => (
-          <FoodContainer key={food._id} food={food} />
+        {filterProductByCategory().map((prod) => (
+          <ProductContainer key={prod._id} product={prod} />
         ))}
       </FoodStorage>
       <CheckoutButton />
@@ -46,4 +47,5 @@ const FoodStorage = styled.div`
   }
 `;
 
-export default Foods;
+export default Products
+;

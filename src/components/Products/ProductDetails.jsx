@@ -8,7 +8,7 @@ import { AiOutlineShoppingCart } from "react-icons/ai";
 import { useDispatch } from "react-redux";
 import { add } from "../../reducers/cartReducer";
 
-const FoodDetails = () => {
+const ProductDetails = () => {
   // internal imports
   const { id } = useParams();
   const dispatch = useDispatch();
@@ -50,7 +50,7 @@ const FoodDetails = () => {
           </div>
         </FoodDetail>
         <ImageContainer>
-          <img src={imagePath} alt={name} />
+          <img src={`../${imagePath}`} alt={name} />
         </ImageContainer>
       </FoodContainer>
     </Container>
@@ -109,4 +109,4 @@ const ImageContainer = styled.div`
   }
 `;
 
-export default FoodDetails;
+export default ProductDetails;

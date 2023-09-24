@@ -2,12 +2,12 @@ import { useNavigate } from "react-router-dom";
 import React from "react";
 import { styled } from "styled-components";
 // eslint-disable-next-line react/prop-types
-const FoodContainer = ({ food }) => {
+const ProductContainer = ({ product }) => {
   // eslint-disable-next-line react/prop-types
-  const { imagePath, name, details, price, _id } = food;
+  const { imagePath, name, details, price, _id } = product;
   const navigate = useNavigate();
   return (
-    <FlexContainer onClick={() => navigate("/food/" + _id)}>
+    <FlexContainer onClick={() => navigate("/product/" + _id)}>
       <Card>
         <img src={imagePath} alt={name} />
         <p style={{ fontWeight: 500 }}>{name}</p>
@@ -58,4 +58,4 @@ const Card = styled.div`
   }
 `;
 
-export default FoodContainer;
+export default ProductContainer;

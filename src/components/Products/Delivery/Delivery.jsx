@@ -18,7 +18,7 @@ const Delivery = () => {
   const [isDeliveryDetails, setIsDeliveryDetails] = useState(false);
 
   //from redux-toolkit
-  const foodItems = useSelector((state) => state.cart);
+  const products = useSelector((state) => state.cart);
   const dispatch = useDispatch();
 
   const handleInputValues = (event) => {
@@ -43,8 +43,8 @@ const Delivery = () => {
         </div>
         <FoodItems>
           <div className="items">
-            {foodItems.map((foodItem) => (
-              <DeliveryItems key={foodItem._id} foodItem={foodItem} />
+            {products.map((product) => (
+              <DeliveryItems key={product._id} product={product} />
             ))}
           </div>
           <DeliveryDetails isDeliveryDetails={isDeliveryDetails} />

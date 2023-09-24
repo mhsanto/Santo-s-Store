@@ -7,7 +7,7 @@ import { firebaseAuth } from "../../firebase";
 const CheckoutButton = () => {
   const handleCheckout = () => {
     onAuthStateChanged(firebaseAuth, (currentUser) => {
-      currentUser ? navigate("/food/delivery") : navigate("/login");
+      currentUser ? navigate("/product/delivery") : navigate("/login");
     });
   };
 

@@ -3,8 +3,8 @@ import { Route, Routes } from "react-router-dom";
 import { GlobalStyle } from "./GlobalStyle";
 import Navbar from "./components/Navbar";
 import ErrorPage from "./components/ErrorPage";
-import FoodDetails from "./components/FoodItems/FoodDetails";
-import Delivery from "./components/FoodItems/Delivery/Delivery";
+import ProductDetails from "./components/Products/ProductDetails";
+import Delivery from "./components/Products/Delivery/Delivery";
 import Home from "./components/About_Us/Home";
 import CheckoutPage from "./components/OrderCheckout/CheckoutPage";
 import Terms from "./components/Footer/Terms";
@@ -20,14 +20,16 @@ const App = () => {
       <Routes>
         <Route path="/" element={<Home />} />
 
-        <Route path="/food/:id" element={<FoodDetails />} />
+        <Route path="/product/:id" element={<ProductDetails />} />
 
-        <Route path="/food/Delivery" element={<Delivery />} />
+        <Route path="/product/Delivery" element={<Delivery />} />
 
-        <Route path="/food/checkout" element={<CheckoutPage />} />
+        <Route path="/product/checkout" element={<CheckoutPage />} />
 
         <Route path="/login" element={<HandleAuthentication />} />
+
         <Route path="/footer/terms" element={<Terms />} />
+
         <Route path="/footer/condition" element={<Condition />} />
 
         <Route path="*" element={<ErrorPage />} />

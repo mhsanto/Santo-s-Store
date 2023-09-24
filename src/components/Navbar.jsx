@@ -64,7 +64,7 @@ const Navbar = () => {
           <AuthenticationSection>
             <Cart
               disabled={cartItem.length === 0}
-              onClick={() => navigate("/food/delivery")}
+              onClick={() => navigate("/product/delivery")}
             >
               <AiOutlineShoppingCart style={{ cursor: "pointer" }} size={22} />
               <span style={{ fontWeight: 600, color: "var(--primary-color)" }}>

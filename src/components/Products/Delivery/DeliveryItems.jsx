@@ -3,27 +3,27 @@ import { styled } from "styled-components";
 import Quantity from "../Quantity";
 import { useSelector } from "react-redux";
 
-const DeliveryItems = ({ foodItem }) => {
+const DeliveryItems = ({ product }) => {
   const cartItems = useSelector((state) => state.cart);
   return (
     <>
       {cartItems.length > 0 && (
         <FoodDeliveryDetails>
           <ImageSection>
-            <img src={foodItem?.imagePath} alt={foodItem.name} />
+            <img src={`../${product?.imagePath}`} alt={product.name} />
           </ImageSection>
           <div>
-            <p style={{ fontSize: "10px" }}>{foodItem.name}</p>
+            <p style={{ fontSize: "10px" }}>{product.name}</p>
             <h5
               style={{
                 color: "var(--primary-color)",
                 fontSize: "clamp(0.63rem, calc(0.49rem + 0.65vw), .90rem)",
               }}
             >
-              ${foodItem.price}
+              ${product.price}
             </h5>
           </div>
-          <Quantity filteredList={foodItem} />
+          <Quantity filteredList={product} />
         </FoodDeliveryDetails>
       )}
     </>
