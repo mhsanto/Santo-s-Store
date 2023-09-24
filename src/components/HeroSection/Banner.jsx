@@ -1,4 +1,3 @@
-// import BannerImage from "../../assets/images/others/banner.jpg";
 import BannerImage from "../../../public/Banner.jpg";
 import BannerImage2 from "../../../public/buyFromHome.jpg";
 import BannerImage3 from "../../../public/Banner3.svg";
@@ -45,14 +44,7 @@ const Banner = () => {
 const BannerSection = styled.section`
   position: relative;
   height: 65vh;
-  .rsis-container {
-    background-position: center;
-  }
-  .rsis-image {
-    background-position: center;
-    background-size: contain !important;
-    background-repeat: no-repeat !important;
-  }
+ 
 `;
 
 export default Banner;
