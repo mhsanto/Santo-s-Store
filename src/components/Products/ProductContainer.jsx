@@ -58,4 +58,4 @@ const Card = styled.div`
   }
 `;
 
-export default ProductContainer;
+export default React.memo(ProductContainer);

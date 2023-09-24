@@ -53,7 +53,7 @@ const DeliveryDetails = ({ isDeliveryDetails }) => {
             <Button
               disabled={!isDeliveryDetails}
               className={!isDeliveryDetails ? "disable" : ""}
-              onClick={() => navigate("/food/checkout")}
+              onClick={() => navigate("/product/checkout")}
             >
               Place order
             </Button>

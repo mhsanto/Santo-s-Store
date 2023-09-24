@@ -2,7 +2,7 @@ import { styled } from "styled-components";
 import productsList from "../../datas";
 import { Container } from "../../GlobalStyle";
 import ProductContainer from "./ProductContainer";
-import { useState } from "react";
+import { useCallback, useState } from "react";
 import Categories from "./Category";
 import CheckoutButton from "./CheckoutButton";
 
@@ -11,13 +11,13 @@ const Products
   const [selectedCategory, setSelectedCategory] = useState("headphones");
   const [products, setProducts] = useState(productsList);
 
-  const filterProductByCategory = () => {
+  const filterProductByCategory = useCallback(() => {
     if (selectedCategory) {
       return products.filter((food) => selectedCategory === food.category);
     } else {
       return products;
     }
-  };
+  },[selectedCategory]);
 
   return (
     <Container>

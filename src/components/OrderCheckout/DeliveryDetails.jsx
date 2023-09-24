@@ -1,8 +1,6 @@
-import React, { useEffect, useState } from "react";
+import React, {  useState } from "react";
 import BikeImage from "../../../public/deliveryBoy.svg";
 import { styled } from "styled-components";
-import { onAuthStateChanged } from "firebase/auth";
-import { firebaseAuth } from "../../firebase";
 
 const DeliveryDetails = ({ name, email, userAddresses }) => {
   const [time, setTime] = useState(new Date());
